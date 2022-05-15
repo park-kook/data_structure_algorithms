@@ -10,7 +10,7 @@ def pair_sum(nums,target):
         return False#means does not return anything.  
     #set for tracking
     seen = set()
-    output = set()
+#    output = set()
     output = []
     #keep this in mind it;s a really great strategy at converting things that might seem like take order. 
     #and squared and reducing it down to a linear order. 
