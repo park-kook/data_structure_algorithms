@@ -1,4 +1,11 @@
+###############################################
+#sequential search 
+#ele = element
+#arr = array
+#pos = position
+#######unordered
 
+#True or not for unoredered
 #True or not for unoredered
 def seq_search(arr,ele):
     """
