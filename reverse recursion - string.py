@@ -20,3 +20,13 @@ def reverse(s):
 reverse('hello')
 reverse('hello world')
 reverse('123456789')
+
+
+Google onsite interview 3
+##Given a string, write a function that uses recursion to reverse it. 
+'''
+def reverse(s):
+    if len(s)<=1:
+        return s
+    return reverse(s[1:])+s[0]
+
