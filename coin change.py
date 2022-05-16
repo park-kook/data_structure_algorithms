@@ -1,17 +1,26 @@
-''
+'''
 #Coin Change1
+you are given coins of different denominations and a total of money amount. 
+Write a fucntion to compute the fewest number of conis that you need to make up that amount. 
+if that amount of money cannot be made up by any combination of the coins, return -1
+you may assume that you have an infinite number of each kind of coin.
+
+3. Dynamic Programing - Bottom-up
+time complexity = big o(amount * len(coins))
+space complexity  = big o (amount) for just dynamic space
 '''
 amount = 7
 def coninchange(amount,coins):
-    dp = [amount+1]*(amount+1)
+    dp = [amount+1]*(amount+1) #amount+1 just max number (amount+1) cause start from 0
     dp[0]=0
     
     for a in range(1, amount+1):
         for c in coins:
             if a - c>=0:
                 dp[a] =  min(dp[a],1+dp[a-c])
+                #coin = 4, a = 7, dp[7] = 1+dp[7-4]
             
-    return dp[amount] if dp[amount] !=amount + 1 else -1
+    return dp[amount] if dp[amount] !=amount + 1 else -1 #if default value not given, then return dp[amount]
 
 coninchange(7,[1,3,4,5])
 coninchange(63,[1,5,10,25])
