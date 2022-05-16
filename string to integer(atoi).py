@@ -19,33 +19,7 @@ Note:
 Only the space character ' ' is considered a whitespace character.
 Do not ignore any characters other than the leading whitespace or the rest of the string after the digits.
 
-'''
-#################################
-    def myAtoi(s: str) -> int:
-        s = s.strip() #remove every whitespace. 
-        num, i, sign, n = 0, 0, 1, len(s)
-        if not s:
-            return 0
-        if s[0] == '-':
-            sign = -1
-            i+=1
-        if s[0] == '+':
-            i+=1
-            
-        while i < n:
-            dg = ord(s[i]) - ord('0')
-            if dg >= 0 and dg <= 9:
-                num = (num*10) + dg
-            else:
-                break #terminate the current loop and resumes execution at the next statement. 
-            i+=1
-        num = sign * num
-        if num < -(2**31):
-            return -(2**31)
-        if num > (2**31) -1:
-            return (2**31) -1
-        return num
-    
+  
 #############################
     def myAtoi(s: str) -> int:
         result = ''
@@ -81,3 +55,32 @@ myAtoi("   -42")
 myAtoi("4193 with words")
 myAtoi("words and 987")
 myAtoi("-91283472332")
+
+
+'''
+#################################
+    def myAtoi(s: str) -> int:
+        s = s.strip() #remove every whitespace. 
+        num, i, sign, n = 0, 0, 1, len(s)
+        if not s:
+            return 0
+        if s[0] == '-':
+            sign = -1
+            i+=1
+        if s[0] == '+':
+            i+=1
+            
+        while i < n:
+            dg = ord(s[i]) - ord('0')
+            if dg >= 0 and dg <= 9:
+                num = (num*10) + dg
+            else:
+                break #terminate the current loop and resumes execution at the next statement. 
+            i+=1
+        num = sign * num
+        if num < -(2**31):
+            return -(2**31)
+        if num > (2**31) -1:
+            return (2**31) -1
+        return num
+  
