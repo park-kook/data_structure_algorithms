@@ -117,3 +117,72 @@ node = [[4],[7,9],[10,2,6],[6],[2]]
 
 avg_by_depth(node)
 output = [4.0, 8.0, 6.0, 6.0, 2.0]
+
+
+
+
+'''
+###breadth First Search - queue FIFO
+'''
+a = [1,2,3]
+a.pop(0)
+
+queue = []
+queue.append('a')
+queue.append('b')
+queue.append('c')
+queue.pop(0)
+
+
+q = Queue()
+q.put('a')
+q.put('b')
+q.put('c')
+
+q.get()
+q.queue[1]
+    #what if we go to breadth first search, then we can go level by level, once we calculate average
+#we can go next level and reset the average, then recalculate avg on the second level
+  #     4
+    # / \
+    # 2 9
+    # / \ \
+    # 3 5 7
+from queue import Queue
+
+class newNode:
+    def __init__(self, a):
+        self.val = a
+        self.left = None
+        self.right = None
+        
+ 
+        
+def averageOfLevels(root):
+    q = Queue()
+    q.put(root)
+    while (not q.empty()):
+        Sum = 0
+        count = 0
+        temp = Queue()
+        while (not q.empty()):
+            n = q.queue[0]
+            q.get() #fifo return initial value in the queue
+            Sum += n.val
+            count+=1
+            if (n.left !=None):
+                temp.put(n.left)
+            if (n.right !=None):
+                temp.put(n.right)
+        q = temp
+        print((Sum*1.0 / count), end = " ")
+
+root = None
+root = newNode(4)
+root.left = newNode(2)
+root.right = newNode(9)
+root.left.left = newNode(3)
+root.left.right = newNode(5)
+root.right.right = newNode(7)
+averageOfLevels(root)    
+output = [4 5.5 5]
