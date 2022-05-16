@@ -1,4 +1,13 @@
+'''
+given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays. 
+input nums1 = [1,3], nums2=[2]
+output = 2
 
+nums1 = [1,2], nums2=[3,4]
+output = 2.5
+(2+3)/2
+
+'''
 def findMedianSortedArrays(nums1,nums2):
     A,B = nums1, nums2
     total = len(nums1) + len(nums2)
