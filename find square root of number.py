@@ -24,3 +24,38 @@ def solution(num):
     return k
         
 solution(3)     
+
+
+#binary search
+def better_solution(num):
+    if num <0:
+        raise ValueError
+    if num==1:
+        return 1
+    low = 0
+    high = round(num/2+0.1)+1
+#    high = round(num/2+0.1)    
+    
+#    while low+1<high:
+#        mid = low + round((high-low)/2+0.1)
+#        square = mid**2
+#        if square ==num:
+#            return mid
+#        elif square < num:
+#            low = mid
+#        else:
+#            high = mid
+#    return low
+
+    while low+1<high:
+        mid = round((high+low)/2+0.1)
+        square = mid**2
+        if square ==num:
+            return mid
+        elif square < num:
+            low = mid
+        else:
+            high = mid
+    return low
+
+better_solution(-1)
