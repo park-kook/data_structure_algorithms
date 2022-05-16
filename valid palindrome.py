@@ -44,3 +44,60 @@ considering only alphanumeric characters and ignoring cases.
 isPalindrome("A man, a plan, a canal: Panama")  
 isPalindrome("race a car")  
 s="A man, a plan, a canal: Panama"
+
+
+
+'''
+Valid Palindrome II
+Given a string s, return true if the s can be palindrome 
+after deleting at most one character from it.
+'''
+
+
+def validPalindrome(s: str, n=0) -> bool:
+
+        rev=s[::-1]
+        i=0
+
+        while i<len(s):
+            if s[i]==rev[i]:
+                i+=1
+                #continue
+            else:
+                break
+        cut=s[:i]+s[i+1:]
+        # print(s)
+        rev=cut[::-1]
+        if cut==rev:
+            return True
+        newcut=s[:len(s)-i-1]+s[len(s)-i:]
+        # print(newcut)
+        rev2=newcut[::-1]
+        if newcut==rev2:
+            return True
+        else: 
+            return False
+    
+def validPalindrome(s: str, n=0) -> bool:   
+    for i in range(0, int(len(s)/2)):
+        if s[i] != s[len(s)-i-1]:
+            return False
+        return True
+    
+    
+for i in range(0, int(len(s)/2)):
+    if s[i] != s[len(s)-i-1]:
+        print(False)
+    else: 
+        print(True)    
+s="abca"
+s[1] == s[2]
+s[2]
+int(len(s)/2)
+validPalindrome("aba")
+validPalindrome("abca")
+validPalindrome("abc")
+validPalindrome("abcda")
+validPalindrome("aacba")
+validPalindrome("abcdba")
+validPalindrome("cbbcc")
