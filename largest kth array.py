@@ -18,7 +18,6 @@ def findKthLargest(nums, k):
     nums.sort()
     return nums[len(nums)-k]
 
-def findKthLargest(nums,k):
     k = len(nums)-k
     
     def quickSelect(l,r):
