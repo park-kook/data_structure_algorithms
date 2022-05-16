@@ -18,7 +18,7 @@ addBinary("1010","1011")
 
         #return '{0:b}'.format(int(a, 2) + int(b, 2))
         n = max(len(a), len(b))
-        a, b = a.zfill(n), b.zfill(n)
+        a, b = a.zfill(n), b.zfill(n) #zfill() method returns a copy of the string with ‘0’ characters padded to the leftside of the given string.
         
         carry = 0
         answer = []
