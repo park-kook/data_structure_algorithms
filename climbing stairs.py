@@ -1,5 +1,8 @@
+
+'''
 climbing stairs
 you are climbing a staircase it takes n steps to reach the top.
+each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
 '''
 n=2
 ouput=2
