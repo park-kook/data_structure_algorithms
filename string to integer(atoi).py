@@ -19,7 +19,7 @@ Note:
 Only the space character ' ' is considered a whitespace character.
 Do not ignore any characters other than the leading whitespace or the rest of the string after the digits.
 
-  
+  '''
 #############################
     def myAtoi(s: str) -> int:
         result = ''
