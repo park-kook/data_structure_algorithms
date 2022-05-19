@@ -12,8 +12,10 @@ class Node:
 
 def maxDepth(root):
   # Null node has 0 depth.
+#  if root is None:
   if root == None:
-    return 0
+  #  return 0
+    return -1
 
   # Get the depth of the left and right subtree 
   # using recursion.
@@ -21,11 +23,11 @@ def maxDepth(root):
   rightDepth = maxDepth(root.right)
 
   # Choose the larger one and add the root to it.
-  if leftDepth > rightDepth:
-    return leftDepth + 1
-  else:
-    return rightDepth + 1
-
+ # if leftDepth > rightDepth:
+ #   return leftDepth + 1
+ # else:
+ #   return rightDepth + 1
+  return max(leftDepth, rightDepth)+1
 # Driver code
 root = Node(1)
 root.left = Node(2)
@@ -36,3 +38,5 @@ root.right.right = Node(6)
 root.right.right.left = Node(8)
 root.right.left.right = Node(7)
 print("The max depth is:", maxDepth(root))
+
+#output 3 or 4 if change return 0 if root==None:
