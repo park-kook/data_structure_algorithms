@@ -106,4 +106,9 @@ root = buildTree(inOrder, preOrder, 0, len(inOrder)-1)
 print("Inorder traversal of the constructed tree is")
 printInorder(root)
 printPreorder(root)
+
+
+
+
+
   
