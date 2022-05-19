@@ -55,8 +55,6 @@ def printPreorder(node):
     print(node.val,end=' ')    
     #then recur on left child
     printPreorder(node.left)
-    #then print the data of node
-#    print(node.val,end=' ')
     # now recur on right child
     printPreorder(node.right)
 
