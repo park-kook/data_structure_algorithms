@@ -44,7 +44,7 @@ def printList(node):
 def mergeKlists(lists):
     
     #create a min-heap using the first node of each list
-    pq = [x for x in lists]
+    pq = [x for x in lists] #[[2, 3, 5], [1, 4, 8], [6, 7, 9]]
     heapq.heapify(pq)
     
     #take two pointers, head and tail, where the head points to the first node
