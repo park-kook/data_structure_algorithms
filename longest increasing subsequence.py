@@ -18,7 +18,7 @@ output = 4 #[0,1,2,3]
 
 def lengthOfLIS(nums):
     LIS = [1]*len(nums) #at last node, there is no further continous, 
-    #so it is alwasy one count so we need to reverse from bottom up of dynamic programming
+    #so it is alwasy one count so we need to reverse from topdown (from last end) of dynamic programming
     
     for i in range(len(nums)-1, -1, -1):
 
