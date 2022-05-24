@@ -5,7 +5,9 @@ Given an unsorted array of integers, find the length of the longest consecutive 
 your algorithm should run in O(n) complexity
 
 count if there is previous number or not of the number in the loop
-
+count if there is previous number or not of the number in the loop
+100, 4, 200, 1, 3, 2
+            starting from 1 and adding length 1 more until n+lengh in numSet:
 '''
 nums = [100,4,200,1,3,2]
 output: 4
