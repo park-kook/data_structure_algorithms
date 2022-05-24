@@ -15,23 +15,22 @@ class node:
         self.right = None
 
 def maxPathSum(root):
-    res = [root.val]
+    res = [root.val] #global variable: why list? we can update it with recursive function
     
     #return max path sum without split
     def dfs(root):
         if not root:
             return 0
         
-        leftMax = dfs(root.left)
+        leftMax = dfs(root.left)  #recursive function
         rightMax = dfs(root.right)
-        leftMax = max(leftMax,0)
-        rightMax = max(rightMax, 0)
+        leftMax = max(leftMax,0) # if value is negative, equal to zero
+        rightMax = max(rightMax, 0) 
         
-        #compute max path sum with splits
-        
+        #1. compute max path sum with splits
         res[0] = max(res[0], root.val + leftMax + rightMax)
-        return root.val + max(leftMax, rightMax)
-    dfs(root)
+        return root.val + max(leftMax, rightMax) #2. without split, we cannot choose both. Choose one of them
+    dfs(root) # call dfs function with root input
     return res[0]
 
 root = None
