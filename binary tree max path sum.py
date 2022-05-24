@@ -37,7 +37,7 @@ def maxPathSum(root):
         #1. compute max path sum with splits
         res[0] = max(res[0], root.val + leftMax + rightMax)
         return root.val + max(leftMax, rightMax) #2. without split, we cannot choose both. Choose one of them
-    dfs(root) # call dfs function with root input
+    dfs(root) # call dfs function with root input to update global variable res above
     return res[0]
 
 root = None
