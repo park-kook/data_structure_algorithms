@@ -4,9 +4,16 @@ A path in a binary tree is a sequence of nodes where each pair of adjacent nodes
 connecting them. A node can only appear in the sequence at most once. Note that path does not need to 
 pass through the root. The  path sum of a path is the sum of the nodes' values nin the path
 Given the root of binary tree, return the maximum path sum of any path
+           1
+        /    \ 
+       2      3
+            /   \
+            4   5
 '''
-root = [1,2,3]
-output = 6
+#root = [1,2,3]
+#output = 6
+#root = [1,2,3, 4, 5]
+#answer = 12
 
 class node:
     def __init__(self, val = 0):
