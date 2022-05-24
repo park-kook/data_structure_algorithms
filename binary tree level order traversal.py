@@ -11,6 +11,7 @@ Merge k sorted arrays (Different Sized Arrays)
        9      20
             /   \
             15   7
+output = [[3], [9, 20], [15, 7]]
 '''
 class Node: 
     def __init__(self, val=0):
