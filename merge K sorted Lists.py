@@ -35,7 +35,7 @@ def printList(node):
         
 #the main function to merge given k'sorted linke lists
 #it takes a list of lists list of size 'k' and generate the sorted output
-#lists = [[1,4,5],[1,3,4],[2,6]]
+#lists  =[[2, 3, 5], [1, 4, 8], [6, 7, 9]]
 #
 #for x in lists:
 #    print(x)
@@ -54,7 +54,7 @@ def mergeKlists(lists):
     #run till min-heap is empty
     while pq: 
         #extract the minimum node from the min-heap
-        min = heapq.heappop(pq)
+        min = heapq.heappop(pq) #extract [1,4,8]
         
         #add the minimum node to the output list
         if head is None:
