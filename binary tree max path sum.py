@@ -36,7 +36,7 @@ def maxPathSum(root):
         
         #1. compute max path sum with splits
         res[0] = max(res[0], root.val + leftMax + rightMax)
-        return root.val + max(leftMax, rightMax) #2. without split, we cannot choose both. Choose one of them
+        return root.val + max(leftMax, rightMax) #-> res[0] #2. without split, we cannot choose both. Choose one of them
         
        #between 1 and 2 compete to choose max number for split or without split
    
