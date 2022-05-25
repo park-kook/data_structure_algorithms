@@ -44,6 +44,8 @@ def maxPathSum(root):
         
         #1. compute max path sum with splits
         res[0] = max(res[0], root.val + leftMax + rightMax)
+ #       res[0] = max(res[0], root.val + max(leftMax, rightMax)) # if we do not start from new path node, only need to go through root node
+           #below return change to res[0] instead of one line below. 
         return root.val + max(leftMax, rightMax) #-> res[0] = root.val + max(leftMax, rightMax)
                                                      ##2. without split, we cannot choose both. Choose one of them
         # return the max gain if continue the same path
