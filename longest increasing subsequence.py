@@ -5,7 +5,7 @@ given an integer array nums, return the length of the longest strictly increasin
 A subsequence is a sequence that can be derived from an array by deleting some or no elments 
 without changing the order of the remaining elements. e.g. [3,6,2,7] is a subsequence of the array 
 [0,3,1,6,2,2,7]
-O(N^2) - Dynamic programming
+O(N^2) - Dynamic programming 
 
 space compexity is O(n) as one array called cache to store the results of n states. Hence
 the size of the array is n. 
