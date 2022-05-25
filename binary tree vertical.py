@@ -35,6 +35,11 @@ output of print this tree vertically will be:
 '''
 
 using level order traversal using bfs first in first out
+
+Time Complexity of the above implementation is O(n Log n). of note a Self-Balancing Binary Search Tree where all operations take O(Logn) time. 
+hashing based solution can be considered as O(n) 
+
+Auxiliary Space: O(n)
 '''
 ####### Version BFS 1
 # Function to perform vertical traversal on a given binary tree
