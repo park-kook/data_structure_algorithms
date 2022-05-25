@@ -1,6 +1,6 @@
 
 '''
-first-depth tree problem
+depth - first tree problem
 Given a binary tree, get the average value at each level of the trees. 
 Input: 
     4
