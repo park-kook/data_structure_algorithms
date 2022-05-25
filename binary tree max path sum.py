@@ -1,4 +1,5 @@
 
+'''
 Binary Tree Maximum Path Sum
 A path in a binary tree is a sequence of nodes where each pair of adjacent nodes in the sequence has an edge
 connecting them. A node can only appear in the sequence at most once. Note that path does not need to 
@@ -13,7 +14,7 @@ Given the root of binary tree, return the maximum path sum of any path
 #root = [1,2,3]
 #output = 6
 #root = [1,2,3, 4, 5]
-#answer = 12
+#answer = 12 #3+4+5 is the max
 
 class node:
     def __init__(self, val = 0):
