@@ -16,6 +16,10 @@ output: [4,8,6,6,2]
 #it looks like all interget, can I assume all integer?
 #vefore you begin coding, explain out loud how you would like to solve the problem and get feedback from your interviwer
 #Depth First Serach using stack - LastIn First Out
+# vs 
+    #what if we go to breadth first search, then we can go level by level, once we calculate average
+#we can go next level and reset the average, then recalculate avg on the second level
+
 class node(object):
     def __init__(self,v):
         self.val = v
