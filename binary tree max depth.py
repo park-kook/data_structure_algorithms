@@ -3,6 +3,11 @@
 The maximum depth of a binary tree is the number of nodes from 
 the root down to the furthest leaf node. In other words, it is the height 
 of a binary tree. 
+
+Time Complexity: O(n)
+
+Space Complexity: O(n)
+
 '''
 class Node: 
   def __init__(self , val): 
