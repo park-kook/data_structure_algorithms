@@ -25,9 +25,9 @@ def maxProduct(nums):
         if n ==0:
             curMin, curMax = 1,1
             continue
-        tmp = curMax * n
+        tmp = curMax * n #in cur Min, curmax should not come from curmax right above, so tmp
         curMax = max(n*curMax, n*curMin, n)
-        curMin = min(tmp, n*curMin, n)
+        curMin = min(tmp, n*curMin, n) #min choose just previous number, not curnum
         res = max(res, curMax)
     return res
 maxProduct(nums)
