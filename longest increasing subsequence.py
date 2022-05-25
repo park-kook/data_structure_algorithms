@@ -7,6 +7,9 @@ without changing the order of the remaining elements. e.g. [3,6,2,7] is a subseq
 [0,3,1,6,2,2,7]
 O(N^2) - Dynamic programming
 
+space compexity is O(n) as one array called cache to store the results of n states. Hence
+the size of the array is n. 
+
 at last node, there is no further continous, so it is alwasy one count so we need to reverse from bottom up
 of dynamic programming
 '''
