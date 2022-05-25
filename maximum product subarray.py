@@ -3,6 +3,9 @@
 Maximum Product Subarray
 Given an integer array nums, find the contiguous subarray within an array (continaing at least one number) 
 which has the largest product
+time complexity O(N)
+space complexity O(1)
+
 """
 nums = [2,3,-2,4]
 output = 6
