@@ -66,8 +66,8 @@ def mergeLists(l1,l2):
         #compare the data of the lists and whichever is smaller is
         #appended to the last of the merged list and the head is changed
         if l1.val < l2.val:
-            tail.next = l1
-            l1 = l1.next
+            tail.next = l1 #lower value will be saved in the tail of the list output
+            l1 = l1.next #move lefter pointer to the right
         else: 
             tail.next = l2
             l2 = l2.next
