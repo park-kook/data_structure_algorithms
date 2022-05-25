@@ -11,7 +11,8 @@ nums = [2,3,-2,4]
 output = 6
 
 def maxProduct(nums):
-    res = max(nums)
+    res = max(nums) #eventually maximum value will be calculated in max produdct, 
+    #it will be compared with curMax
     curMin, curMax = 1,1
     for n in nums:
         if n ==0:
