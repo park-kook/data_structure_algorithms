@@ -31,7 +31,7 @@ def maxPathSum(root):
         
         leftMax = dfs(root.left)  #recursive function
         rightMax = dfs(root.right)
-        leftMax = max(leftMax,0) # if value is negative, equal to zero
+        leftMax = max(leftMax,0) # if value is negative, equal to zero, we don't need to go further
         rightMax = max(rightMax, 0) 
         
         #1. compute max path sum with splits
