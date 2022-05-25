@@ -37,7 +37,8 @@ def lengthOfLongestSubstring(s):
     res = 0
     
     for r in range(len(s)):
-        while s[r] in charSet:
+        while s[r] in charSet: #'pwwkew' case, due to while keep deleting until w is gone 
+                               # so l moves twice, l is located in 2 when r is 2
             charSet.remove(s[l])
             l+=1
         charSet.add(s[r])
@@ -45,3 +46,5 @@ def lengthOfLongestSubstring(s):
     return res
 
 lengthOfLongestSubstring(s)
+s = 'pwwkew'
+output = 3
