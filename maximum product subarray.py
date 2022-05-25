@@ -3,6 +3,13 @@
 Maximum Product Subarray
 Given an integer array nums, find the contiguous subarray within an array (continaing at least one number) 
 which has the largest product
+
+
+all positive
+all negative so we need to think split between min and max per each iteration
+time complexity O(N)
+space complexity O(1)
+
 time complexity O(N)
 space complexity O(1)
 
