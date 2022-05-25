@@ -160,8 +160,32 @@ class newNode:
         self.left = None
         self.right = None
         
- 
+ '''
+using dequeu
+'''
+def averageOfLevels(root):
+    q = deque()
+    q.append(root)
+    while q:
+        Sum = 0
+        count = 0
+        temp = deque()
+        while q:
+            n = q.popleft()
+#            q.get() #fifo return initial value in the queue
+            Sum += n.val
+            count+=1
+            if (n.left !=None):
+                temp.append(n.left)
+            if (n.right !=None):
+                temp.append(n.right)
+        q = temp
+        print((Sum*1.0 / count), end = " ")
+
         
+'''
+using Queue
+'''
 def averageOfLevels(root):
     q = Queue()
     q.put(root)
