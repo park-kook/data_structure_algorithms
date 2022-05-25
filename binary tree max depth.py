@@ -20,7 +20,7 @@ def maxDepth(root):
 #  if root is None:
   if root == None:
   #  return 0
-    return -1
+    return -1 #counts only depth, not including node the answer is three, but if we change it into zero, then it counts 4
 
   # Get the depth of the left and right subtree 
   # using recursion.
