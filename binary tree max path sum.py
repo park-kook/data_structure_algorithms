@@ -36,8 +36,9 @@ def maxPathSum(root):
         if not root:
             return 0
         
-        leftMax = dfs(root.left)  #recursive function
-        rightMax = dfs(root.right)
+        leftMax = dfs(root.left)  #recursive function - first going to the child node bottom
+        rightMax = dfs(root.right) # recursively for the node children to
+                                    #compute max gain from the left and right subtrees
         leftMax = max(leftMax,0) # if value is negative, equal to zero, we don't need to go further
         rightMax = max(rightMax, 0) 
         
