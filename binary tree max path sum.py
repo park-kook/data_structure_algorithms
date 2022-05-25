@@ -10,6 +10,12 @@ Given the root of binary tree, return the maximum path sum of any path
        2      3
             /   \
             4   5
+
+time complexity O(n), where N is number of nodes, since we visit each node not more than 2times.
+space complexity O(n), where H is a tree height, to keep the recursion stack. In the average case of 
+balanced tree, the tree height H = Log N, in the worst case of skwed tree H = N
+
+
 '''
 #root = [1,2,3]
 #output = 6
