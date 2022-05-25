@@ -11,6 +11,9 @@ inorder = [9,3,15,20,7] -left->root->right
             /   \
             15   7
 output=[3,9,20,null,null,15,7]
+Time Complexity : O(n)
+Space complexity : O(N)
+
 '''
 from typing import List
 class node: 
@@ -57,6 +60,9 @@ def printPreorder(node):
     printPreorder(node.left)
     # now recur on right child
     printPreorder(node.right)
+
+preOrder = [3,9,20,15,7]
+inOrder = [9,3,15,20,7] 
 
 root = buildTree(inOrder, preOrder)    
 print("Inorder traversal of the constructed tree is")
