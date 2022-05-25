@@ -41,6 +41,14 @@ hashing based solution can be considered as O(n)
 
 Auxiliary Space: O(n)
 '''
+class node: 
+    # Constructor to create a new node
+    def __init__(self,key):
+        self.key = key
+        self.left = None
+        self.right = None
+        
+
 ####### Version BFS 1
 # Function to perform vertical traversal on a given binary tree
 from collections import defaultdict
@@ -80,8 +88,18 @@ def printVertical(root):
     
     for key in sorted(d.keys()):
         print(d.get(key))
-    
-
+#    return [d[x] for x in sorted(d.keys())]    
+   
+root = None
+root=node(1)
+root.left = node(2)
+root.right = node(3)
+root.right.left = node(5)
+root.right.right = node(6)
+root.right.left.left = node(7)
+root.right.left.right = node(8)
+root.right.left.right.left = node(9)
+root.right.left.right.right = node(10)
 printVertical(root)   
 
 
