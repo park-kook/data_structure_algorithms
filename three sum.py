@@ -5,6 +5,8 @@ such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
 
 sorted array
 left and right pointer
+time complexity O(N^2)
+space complexity O(N)
 '''
 def threeSum(nums):
     res = []
