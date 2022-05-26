@@ -5,7 +5,7 @@ valid parentheses
 def valid(s):
     initvalid=set('([{')
     check=set('()[]{}')
-    match= set([('(',')'),('[',']'),('{','}')])
+#    match= set([('(',')'),('[',']'),('{','}')])
     result=[]
     alp = set('abc')
     
