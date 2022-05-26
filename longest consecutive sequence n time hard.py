@@ -8,7 +8,8 @@ space complexity O(1)
 count if there is previous number (n-1) or not of the number in the loop
 
 100, 4, 200, 1, 3, 2
-starting from 1 above and adding length 1 more until n+lengh in numSet:
+starting from 1 above since count needs from smallest number 
+and adding length 1 more until n+lengh in numSet:
 '''
 nums = [100,4,200,1,3,2]
 output: 4
