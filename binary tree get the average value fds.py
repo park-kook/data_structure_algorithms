@@ -182,6 +182,9 @@ def averageOfLevels(root):
         q = temp
         print((Sum*1.0 / count), end = " ")
 
+
+        
+        
         
 '''
 using Queue
