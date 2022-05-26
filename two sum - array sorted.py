@@ -21,7 +21,7 @@ def twoSum(numbers, target):
             l+=1
         else:
             return [l+1, r+1]
-    return 
+    return -1
 
 
 twoSum(numbers, target)
