@@ -28,7 +28,7 @@ def converts(array):
             if s2 ==';':
                 s1='"' + str(s1) + '"'
         res_s+= s1 + ";"
-        res_s = res_s[:-1]   
+    res_s = res_s[:-1]   
         
     return res_s
 
