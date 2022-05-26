@@ -26,3 +26,19 @@ def twoSum(numbers, target):
 
 
 twoSum(numbers, target)
+
+
+
+
+
+
+def twosum(nums, target):
+    d={}
+    for i, v in enumerate(nums):
+        if target-v not in d:
+            d[v] = i
+        else: 
+            return d[target-v],i
+nums = [2,8,11,15]
+target = 10   
+twosum(nums, target)        
