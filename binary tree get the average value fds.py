@@ -124,6 +124,39 @@ output = [4.0, 8.0, 6.0, 6.0, 2.0]
 
 
 
+'''
+average sum by level order using queue BDF
+'''
+def levelOrder(root):
+    res = []
+    q = collections.deque()
+    q.append(root)
+    
+    while q:
+        qLen = len(q)
+        level = []
+        for i in range(qLen):
+            node = q.popleft()
+            if node:
+                level.append(node.val)
+                q.append(node.left)
+                q.append(node.right)
+                
+        if level:
+            avg = sum(level)/len(level)
+            res.append(avg)
+#            res.append(level)
+    return res
+
+
+root = None
+root = Node(3)
+root.left = Node(9)
+root.right = Node(20)
+root.right.left = Node(15)
+root.right.right = Node(7)
+levelOrder(root)
+[3.0, 14.5, 11.0]
 
 '''
 ###breadth First Search - queue FIFO
