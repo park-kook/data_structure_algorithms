@@ -4,6 +4,26 @@ Given a long string, write a method that returns true if the string is a valid n
 Only integers and decimals should be considered as valid. In other words, only characters allowed are digits, 
 "-" and ".". The string can be very long (think millions of characters) and no built-in function/class 
 can handle it without overflowing or losing precision.
+
+
+| Input     | Output 
+| -----     | ----- 
+| "13"      | TRUE 
+| "3.0"     | TRUE 
+| "-7.4"    | TRUE 
+| "-13.5"   | TRUE 
+| "abc"     | FALSE 
+| "123a"    | FALSE 
+| "-."      | FALSE 
+| "-..---." | FALSE 
+| "1.0.0.1" | FALSE
+
+
+We do not require complicated cases like ‘log2’, ‘1e5’. 
+
+
+
+
 '''
 
 def valid(s):
