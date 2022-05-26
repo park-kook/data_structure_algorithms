@@ -24,3 +24,7 @@ def minRemoveToMakeValid(s):
     return "".join(string_builder)
 
 ###
+
+minRemoveToMakeValid('()())()')
+
+output ='()()()'
