@@ -4,6 +4,13 @@ Group Anagrams
 Given an array of strings strs, group the anagrams together. You can return the answer in any order.
 An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, 
 typically using all the original letters exactly once.
+
+
+time complexity O(NK log K), where N is the length of strs, and K is the maximum length of a string in strs.
+Then, we sort eaach string in O(KlogK)
+
+space complexity: O(NK)
+
 '''
 #pip install collections-extended
 from collections import defaultdict
