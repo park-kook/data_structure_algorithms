@@ -15,7 +15,13 @@ time complexity O(n), where N is number of nodes, since we visit each node not m
 space complexity O(n), where H is a tree height, to keep the recursion stack. In the average case of 
 balanced tree, the tree height H = Log N, in the worst case of skwed tree H = N
 
-
+          -10
+        /    \ 
+       9      20
+            /   \
+           15   7
+-10->9->new path = 9 update max_sum->20->15->new path = 15 update max_sum ->7->new path 7<max_sum
+->max_Gain = 20+15 =35 -> new path 42(20+15+7) update max_sum-> max_gain = -10+35 =25->new path =-10+9+35 = 34
 '''
 #root = [1,2,3]
 #output = 6
