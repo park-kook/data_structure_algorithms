@@ -60,3 +60,27 @@ def converts(array):
     return res_s
 
 converts(array)
+
+
+'''
+version3
+'''
+array = ['abc', 'b"cd', 'e;fg']
+def converts(array):
+    
+    res=[]   
+    
+    for s1 in array:
+        for s2 in s1:
+            if s2 ==';':
+                s1='"' + s1 + '"'
+            if s2 =='"':
+                s1=s1.replace('"','""')
+
+        res.append(s1)
+
+
+        
+    return ';'.join(res) 
+
+converts(array)
