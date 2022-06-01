@@ -1,3 +1,63 @@
+
+'''
+reverse string
+Wirte a function that receives a string. The i nput string is given as an array of characters s.
+you must do this by modifying the input array in-place with o(1) extra memory
+
+'''
+
+s = ["h","e","l","l","o"]
+output = ["o","l","l","e","h"]
+
+'''
+version 1: time :o(n), sapce:o(1) - left and right pointers
+
+'''
+
+def reverseString(s):
+    res= []
+    l,r = 0, len(s)-1
+    while l<r:
+        s[l],s[r] = s[r],s[l]
+        l,r = l+1, r-1
+    return s
+
+reverseString(s)
+#output = ["h","e","l","l","o"]    
+        
+'''
+version 2: Time: o(n), space o(n) - stack version
+
+'''        
+def reverseString(s):
+    stack=[]
+    for c in s:
+        stack.append(c)
+    i=0
+    while stack:
+        s[i] = stack.pop()
+        i+=1
+    return s
+        
+reverseString(s)  
+output = ["o","l","l","e","h"]
+'''
+version 3: Time: o(n), space o(n) - revursion version
+
+'''  
+def reverseString(s):
+    def reverse(l,r):
+        if l<r:
+            s[l],s[r] = s[r],s[l]
+            reverse(l+1, r-1)
+    reverse(0,len(s)-1)
+    
+    return s
+reverseString(s)
+output = ["o","l","l","e","h"]
+
+
+
 ###################
 def rev_word3(s):
     
