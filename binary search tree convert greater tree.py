@@ -43,6 +43,7 @@ def convertBST(root):
         dfs(node.left)
     dfs(root)
     return root
+#    return curSum
         
 root = None
 root = node(4)
