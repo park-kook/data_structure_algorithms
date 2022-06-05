@@ -30,7 +30,7 @@ def wallsAndGates(rooms):
     ROWS, COLS = len(rooms), len(rooms[0])
     visit = set()
     q = deque()
-    
+    #helper function while loop below    
     def addRoom(r,c):
         if (r<0 or r==ROWS or c<0 or c ==COLS or (r,c) in visit or rooms[r][c]==-1):
             return
