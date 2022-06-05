@@ -46,7 +46,7 @@ def wallsAndGates(rooms):
         for i in range(len(q)):
             r,c = q.popleft() #[0,2] [3,0] simultaneously needs to be count
             rooms[r][c] = dist
-            addRoom(r+1,c) #[1,2]
+            addRoom(r+1,c) #[1,2] adding one distance from above
             addRoom(r-1,c) # return
             addRoom(r,c+1) # [0,3]
             addRoom(r,c-1) # return
