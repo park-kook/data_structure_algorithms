@@ -50,5 +50,5 @@ def wallsAndGates(rooms):
             addRoom(r-1,c) # return
             addRoom(r,c+1) # [0,3]
             addRoom(r,c-1) # return
-        dist+=1
+        dist+=1 # once we are done in the full for loop above, incremental distance +1
 wallsAndGates(rooms)
