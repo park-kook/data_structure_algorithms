@@ -14,6 +14,12 @@ BFS -> o(m*n)
 rooms=[[2147483647,-1,0,2147483647],[2147483647,2147483647,2147483647,-1], [2147483647,-1,2147483647,-1],[0,-1,2147483647,2147483647]]
 output = [[3,-1,0,1],[2,2,1,-1],[1,-1,2,-1],[0,-1,3,4]]
 
+
+[2147483647,-1,      0,         2147483647  ]
+[2147483647,2147483647,2147483647,-1        ] 
+[2147483647,-1        ,2147483647,-1        ]
+[0         ,-1        ,2147483647,2147483647]
+
 import collections
 import heapq
 from collections import deque
@@ -38,10 +44,11 @@ def wallsAndGates(rooms):
     dist = 0
     while q:
         for i in range(len(q)):
-            r,c = q.popleft()
-            addRoom(r+1,c)
-            addRoom(r-1,c)
-            addRoom(r,c+1)
-            addRoom(r,c-1)
+            r,c = q.popleft() #[0,2] [3,0] simultaneously needs to be count
+            rooms[r][c] = dist
+            addRoom(r+1,c) #[1,2]
+            addRoom(r-1,c) # return
+            addRoom(r,c+1) # [0,3]
+            addRoom(r,c-1) # return
         dist+=1
 wallsAndGates(rooms)
