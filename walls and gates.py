@@ -46,9 +46,10 @@ def wallsAndGates(rooms):
         for i in range(len(q)):
             r,c = q.popleft() #[0,2] [3,0] simultaneously needs to be count
             rooms[r][c] = dist
-            addRoom(r+1,c) #[1,2] adding room in the dequeu again means one distance from above
-            addRoom(r-1,c) # return
-            addRoom(r,c+1) # [0,3]
-            addRoom(r,c-1) # return
+            addRoom(r+1,c) #[1,2] for i=0 , return for i=1
+            #adding room in the dequeu again means one distance from above
+            addRoom(r-1,c) # return for i=0, [2,0] for i=1
+            addRoom(r,c+1) # [0,3] for i=0, return for i=1
+            addRoom(r,c-1) # return for i=0, return for i=1 
         dist+=1 # once we are done in the full for loop above, incremental distance +1
 wallsAndGates(rooms)
