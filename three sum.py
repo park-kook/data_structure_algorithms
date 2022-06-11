@@ -13,9 +13,10 @@ def threeSum(nums):
     nums.sort()
     
     for i, a in enumerate(nums):
-        if i>0 and a==nums[i-1]:
-            continue
-        l,r = i+1, len(nums)-1
+        if i>0 and a==nums[i-1]: # prevent from dulplicate set, shold not go through if previous value is the same
+            continue  
+        l= i+1 #index of the first element in the remining elements- not duplicate
+        r =len(nums)-1 # index of the last element
         while l<r:
             threeSum = a + nums[l]+ nums[r]
             if threeSum >0:
