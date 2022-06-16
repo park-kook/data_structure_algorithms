@@ -69,24 +69,11 @@ Traversal is done now as stack S is empty and current is NULL.
 otuput: 4 2 5 1 3
 
 '''
-#wrong version
-def dfs_iterative(root):
-    stack, res = [],[]
-    n=root
-    while n or len(stack)>0:
-        if n: 
-            stack.append(n)
-            n=n.left
-
-        n=stack.pop()
-        res.append(n.val)
-
-        n=n.right
-
-    return res
-dfs_iterative(root)
-#wrong version
-
+class Node: 
+    def __init__(self, val=0):
+        self.val = val
+        self.left = None
+        self.right = None
 
 def dfs_iterative(root):
     stack, res = [],[]
@@ -116,3 +103,24 @@ levelOrder(root)
 dfs_iterative(root)
 
 output = [4 2 5 1 3]
+
+
+
+
+#wrong version
+def dfs_iterative(root):
+    stack, res = [],[]
+    n=root
+    while n or len(stack)>0:
+        if n: 
+            stack.append(n)
+            n=n.left
+
+        n=stack.pop()
+        res.append(n.val)
+
+        n=n.right
+
+    return res
+dfs_iterative(root)
+#wrong version
