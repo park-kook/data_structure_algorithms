@@ -25,8 +25,8 @@ def isValidBST(root):
         if not (node.val < right and node.val >left):
             return False
         
-        return(valid(node.left,left, node.val) and
-               valid(node.right,node.val,right))
+        return(valid(node.left,left, node.val) and # goign to left, node.val means top node when goes to left
+               valid(node.right,node.val,right)) # going to right
     return valid(root, float("-inf"), float("inf"))
 
 
