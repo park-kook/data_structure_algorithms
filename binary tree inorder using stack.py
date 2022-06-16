@@ -83,7 +83,7 @@ def dfs_iterative(root):
             stack.append(n)
             n=n.left #root = node(1), root.left = node(2), root.left = node(3), after that left is null
         elif stack:
-            n=stack.pop()
+            n=stack.pop() #first pop 4 and save it to n, and append n.val = 4 in to the res list
             res.append(n.val)
 
             n=n.right
