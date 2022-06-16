@@ -123,7 +123,7 @@ avg_by_depth(node)
 output = [4.0, 8.0, 6.0, 6.0, 2.0]
 
 
-'''
+
 import collections
 import heapq
 from collections import deque
