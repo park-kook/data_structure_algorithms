@@ -35,8 +35,9 @@ def convertBST(root):
             return
         
         nonlocal curSum # this is because there is declar in the dfs. reference cursum in the upper scope
+                        # dfs used inside as recursion
         dfs(node.right) # this is reversed in order traversal - right node left
-        tmp  = node.val #original node
+        tmp  = node.val # original node
         node.val +=curSum
         curSum += tmp #original node
         
