@@ -1,4 +1,43 @@
 
+
+'''
+A phrase is a palindrome if, after converting all uppercase letters into lowercase letters 
+and removing all non-alphanumeric characters, it reads the same forward and backward. 
+Alphanumeric characters include letters and numbers.
+
+Given a string s, return true if it is a palindrome, or false otherwise.
+'''
+s = "A man, a plan, a canal: Panama"
+Output: true
+Explanation: "amanaplanacanalpanama" is a palindrome.
+
+s = " "
+Output: true
+
+s = "race a car"
+Output: false
+
+
+
+def isPalindrome(s):
+    l, r = 0, len(s) - 1
+    alphanum=set('abcdefghijklmnopqrstuvwxyz1234567890')
+    s=s.lower()
+    while l < r:
+        while l < r and s[l] not in alphanum: 
+            l += 1
+        while l < r and s[r] not in alphanum: 
+            r -= 1
+        if s[l].lower() != s[r].lower(): 
+            return False
+        l += 1
+        r -= 1
+    return True
+isPalindrome(s)
+
+
+
+
 '''
 Valid Palindrome (a word, phrase, sentence, or number that reas the same backward or forward )
 Given a string s, determine if it is a palindrome, 
