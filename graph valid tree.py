@@ -9,7 +9,7 @@ edges = [[0,1],[0,2],[0,3],[1,4]]
 
 output = True
 
-def validTree(self, n, edges):
+def validTree(n, edges):
     if not n: 
         return True
     adj = {i:[] for i in range(n)}
