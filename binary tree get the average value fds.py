@@ -243,6 +243,9 @@ class newNode:
         
  '''
 using dequeu
+Time Complexity: O(N) 
+Space Complexity: O(N) 
+where N is the number of Nodes
 '''
 def averageOfLevels(root):
     q = deque()
