@@ -28,7 +28,7 @@ def characterreplacement(s,k):
             count[s[l]]-=1                      #and left pointer dictionary make -1 
             l+=1
             
-        res = max(res, r-1+1)
+        res = max(res, r-l+1)
     return res
 
 s = "ABABBA"
