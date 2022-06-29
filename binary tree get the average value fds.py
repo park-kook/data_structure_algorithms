@@ -130,7 +130,7 @@ from collections import deque
 from collections import defaultdict
 from collections import deque
 '''
-Merge k sorted arrays (Different Sized Arrays)
+
            3
         /    \ 
        9      20
