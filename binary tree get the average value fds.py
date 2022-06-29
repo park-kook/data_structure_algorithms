@@ -285,9 +285,9 @@ def averageOfLevels(root):
             q.get() #fifo return initial value in the queue
             Sum += n.val
             count+=1
-            if (n.left !=None):
+            if n.left:
                 temp.put(n.left)
-            if (n.right !=None):
+            if n.right:
                 temp.put(n.right)
         q = temp
         print((Sum*1.0 / count), end = " ")
