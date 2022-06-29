@@ -174,6 +174,9 @@ output = [[3], [9, 20], [15, 7]]
 
 '''
 average sum by level order using queue BDF
+Time Complexity: O(N) 
+Space Complexity: O(N) 
+where N is the number of Nodes
 '''
 def levelOrder(root):
     res = []
