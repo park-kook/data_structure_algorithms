@@ -59,6 +59,7 @@ def downwardDigonal(n,A):
     return c
 downwardDigonal(n,A)
 
+
 def downwardDigonal(n,A): #upper left and diagonal
     output =[]
     for col in range(n): #0,1,2
@@ -66,20 +67,24 @@ def downwardDigonal(n,A): #upper left and diagonal
         row=0
         while j>=0:
 
-            output.append(A[row][j])
+#            output.append(A[row][j])
+            print(A[row][j], end="  ")
             
             row+=1
             j-=1
+        print()
 #    return output            
     for row in range(1,n): #lower right
         i=row
         col=n-1
         while i<n:
 
-            output.append(A[i][col])
+#            output.append(A[i][col])
+            print(A[i][col], end="  ")
             col-=1
             i+=1
-    return output
+        print()
+#    return output
 downwardDigonal(n,A)
 
 
