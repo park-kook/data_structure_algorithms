@@ -1,4 +1,7 @@
 
+
+
+
 '''
 Meta interview
 diagonal traversal of Matrix
@@ -89,7 +92,16 @@ COL = 4
  
 # Main function that prints given
 # matrix in diagonal order from bottom to top
- 
+'''
+1
+5 2
+9 6 3
+13 10 7 4
+17 14 11 8
+18 15 12
+19 16
+20
+'''
  
 def diagonalOrder(matrix):
  
