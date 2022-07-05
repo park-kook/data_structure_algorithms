@@ -89,7 +89,8 @@ downwardDigonal(n,A)
 # of given matrix in diagonal order
 ROW = 5
 COL = 4
- 
+#Time Complexity: O(row x col) 
+#Auxiliary Space: O(1) 
 # Main function that prints given
 # matrix in diagonal order from bottom to top
 '''
