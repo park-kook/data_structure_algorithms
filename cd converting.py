@@ -31,13 +31,13 @@ def func(cwd, cd):
     cd_l = cd.split('/') #->['foo','bar']
     res=''
     if cd_l[0] =='':
-        cwd_l=[]
+        cwd_l=[] #if cd starts from / then delete all currnet path. 
     if cwd=='/':
         cwd_l.pop()
     for i in range(len(cd_l)):
         if len(cwd_l) >0 and cd_l[i] == '..':
             cwd_l.pop() 
-            continue
+            continue #cd_l == '..' remove in the loop
         elif cd_l[i] == '.':
             continue
                 
