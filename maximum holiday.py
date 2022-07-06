@@ -21,6 +21,8 @@ def findh(l_list,pto):
         
         while (r-l+1) - count.get('H',0) >pto:
             count[l_list[l]] -=1
+            if count[l_list[l]] ==0:
+              del count[l_list[l]]
             l+=1
             
         res = max(res,r-l+1)
