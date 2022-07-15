@@ -48,7 +48,15 @@ def reverse(head): #head = 6
         head.next = prev #arrow change
         prev = head # move from prev to head
         head = next # move frmo head to next section
-    return prev  
+    return prev 
+#null->1->2->3->null
+#prevhead(1) next(2)
+#next
+    
+#   <-
+#     prev
+#          head
+    
 head = None
 head = Node(2)
 head.next = Node(4)
