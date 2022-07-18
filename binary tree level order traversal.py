@@ -28,6 +28,9 @@ class Node:
         
         
 def levelOrder(root):
+            
+    if root is None:
+           return result
     res = []
     q = collections.deque()
     q.append(root)
