@@ -30,4 +30,5 @@ def findExtra(A, B):
         ans ^= A[i];
     for i in range(len(B)):
         ans ^= B[i];
+    return ans
  
