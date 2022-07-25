@@ -15,7 +15,11 @@ import collections
         """
         ans = collections.defaultdict(list)
         for s in strs:
-            ans[tuple(sorted(s))].append(s)
+#            ans[list(sorted(s))].append(s) #throwing the error. 
+            ans[tuple(sorted(s))].append(s) #immutable objects such as tuples are hashable 
+            #since they have a single unique value that never changes
+            #Hashing such objects always products the same result, so they can be used as the keys for 
+            #dictionaries. 
         return ans.values()
     
 groupAnagrams(["eat","tea","tan","ate","nat","bat"])
