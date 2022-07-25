@@ -9,6 +9,8 @@ B = [2, 4, 6, 8, 10, 12]
 output=13
 
 def findExtra(A, B):
+    A.sort()
+    B.sort()
     if len(A) <len(B):
         A,B=B,A
     for i in range(len(B)):
