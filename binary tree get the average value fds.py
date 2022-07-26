@@ -66,111 +66,7 @@ root.left.right.right.left = node(2)
 avg_by_depth(root)
 
 [4,8,6,6,2]
-# I wawnt to go through the code by using some example if every case run throgh smoothly         
-#data2: {0:(4,1), 1: (16,2)......}
-    
-class node(object):
-    def __init__(self,v):
-        self.val = v
-        self.left = None
-        self.right = None
-        
-def _collect(node, dict_data,depth = 0):
-    if not node: #empty case
-        return None
-    if depth not in dict_data:
-        dict_data[depth] = (node.val,1)
-    else: 
-        val, count = dict_data[depth]
-        val+=node.val
-        count+=1
-        dict_data[depth] = (val,count)
-        
-    
-    _collect(node.left, dict_data, depth+1)
-    _collect(node.right, dict_data, depth+1)
-    
-def avg_by_depth(node):
-    dict_data = {}
-    _collect(node, dict_data) #after run left, data = {0:[4],1:[7,9],2:[10,2,6],3:[6],4:[2]}
-    
-    result = []
-    
-    i = 0
-    while i in dict_data:
-        val,count = dict_data[i]
-        avg = val / count
-        result.append(avg)
-        i+=1
-    
-    return result
-root = None
-root = node(4)
-root.left = node(7)
-root.right = node(9)
-root.left.left = node(10)
-root.left.right = node(2)
-root.right.right = node(6)
-root.left.right.right = node(6)
-root.left.right.right.left = node(2)
-avg_by_depth(root)
 
-dict_data = {0:[4],1:[7,9],2:[10,2,6],3:[6],4:[2]}
-
-node = [[4],[7,9],[10,2,6],[6],[2]]
-
-avg_by_depth(node)
-output = [4.0, 8.0, 6.0, 6.0, 2.0]
-
-
-
-import collections
-import heapq
-from collections import deque
-from collections import defaultdict
-from collections import deque
-'''
-
-           3
-        /    \ 
-       9      20
-            /   \
-            15   7
-'''
-class Node: 
-    def __init__(self, val=0):
-        self.val = val
-        self.left = None
-        self.right = None
-        
-        
-def levelOrder(root):
-    res = []
-    q = collections.deque()
-    q.append(root)
-    
-    while q:
-#        qLen = len(q)
-        level = [] # each level: top node, first floor, second floor
-        for i in range(len(q)):
-            node = q.popleft()
-            if node:
-                level.append(node.val)
-                q.append(node.left)
-                q.append(node.right)
-                
-        if level:
-            res.append(level)
-    return res
-
-root = None
-root = Node(3)
-root.left = Node(9)
-root.right = Node(20)
-root.right.left = Node(15)
-root.right.right = Node(7)
-levelOrder(root)
-output = [[3], [9, 20], [15, 7]]
 
 '''
 average sum by level order using queue BDF
@@ -208,6 +104,16 @@ root.right.left = Node(15)
 root.right.right = Node(7)
 levelOrder(root)
 [3.0, 14.5, 11.0]
+
+
+
+
+
+
+
+
+
+
 
 '''
 ###breadth First Search - queue FIFO
