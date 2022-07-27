@@ -21,8 +21,14 @@ def kClosest(points,k):
 points = [[1,3],[-2,2],[1,1]]
 k=2
 kClosest(points,k)
-output = [[-2,2]]
+output = [[1,1], [-2,2]]
+
+
+'''
+example
 li = [5,7,9,1,3]
 
 heapq.heapify(li)
-li
+heapq.heappop(li)
+output = 1
+'''
