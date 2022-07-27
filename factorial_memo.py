@@ -1,13 +1,3 @@
-factorial_memo = {}
-def factorial(k):
-    #if k<2:
-    if k == 1:
-        return 1
-    if k not in factorial_memo:
-        factorial_memo[k]=k*factorial(k-1)
-    return factorial_memo[k]
-
-factorial(5)
 
 
 factorial_memo = {}
