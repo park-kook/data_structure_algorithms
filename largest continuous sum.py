@@ -20,3 +20,20 @@ large_cont_sum([1,2,-1,3 ,4,10,10,-10,-1])
 
 
 large_cont_sum([1,2,-8,-1,10])
+
+
+nums = [-2,1,-3,4,-1,2,1,-5,4]
+output = 6
+
+def maxsubarray(nums):
+    cum_sum = 0
+    max_sum = max(nums)
+    
+    for i in range(len(nums)):
+        if cum_sum < 0 :
+            cum_sum = 0
+        cum_sum+=nums[i]
+        max_sum  = max(max_sum, cum_sum)
+        
+    return max_sum
+maxsubarray(nums)
