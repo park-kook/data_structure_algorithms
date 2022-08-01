@@ -7,8 +7,7 @@ to solve this problem would be to check every number k between 0 and N/2, until 
 k becomes greater than or equal to N. if k^2 becomes equal to N, then we return k. 
 Otherwise, we return k-1 because we're rounding down. 
 '''
-for k in range(1,3):
-    print(k)
+
 
 def solution(num):
     if num <0:
