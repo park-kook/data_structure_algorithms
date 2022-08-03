@@ -28,10 +28,10 @@ def validKeyboard(keyboard, word, max_jump):
   column = len(keyboard[0])
   coord = []
   length = 0
-  for w in word:
-      for i, words in enumerate(keyboard):
-          if w in words:
-              j  = words.index(w)
+  for letter in word:
+      for i, l_letter in enumerate(keyboard):
+          if letter in l_letter:
+              j  = l_letter.index(letter)
               coord.append([i,j]) #->[[2,2],[1,0],[0,4]]   
   Falsed = 0
 
