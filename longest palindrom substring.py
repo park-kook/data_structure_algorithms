@@ -23,7 +23,10 @@ def longestPalindrome(s):
             l-=1
             r+=1
         #even length
-        
+#The edge case (and reason for the seemingly redundant code) is that the above grabs 
+#odd length palindromes by starting with 1 index and expanding outwards. 
+#You can grab the even case by doing the while loop again, 
+#but initializing the pointers to two indices next to each other rather than the same.
         l,r = i, i+1
         while l>=0 and r <len(s) and s[l]==s[r]:
             if (r-l+1)>resLen:
