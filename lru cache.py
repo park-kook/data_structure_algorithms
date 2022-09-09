@@ -55,24 +55,26 @@ class LRUCache:
         if len(self.cache) > self.capacity:
             self.cache.popitem(last = False)
             
+cache = None        
 cache = LRUCache(2)
-
-cache = None
 cache.put(1, 1) #// it will store a key (1) with value 1 in the cache. 
-print(cache.cache)
-cache.put(2, 1) #// it will store a key (2) with value 2 in the cache. 
-print(cache.cache)
-cache.get(1) #// returns 10 
-print(cache.get(1))
+print(cache.cache) #OrderedDict([(1, 1)])
+cache.put(2, 2) #// it will store a key (2) with value 2 in the cache.
+print(cache.cache) # OrderedDict([(1, 1), (2, 1)])
+cache.get(1) #// returns 1
+print(cache.cache) #OrderedDict([(2, 1), (1, 1)])
 cache.put(3, 3) #// evicts key 2 and store a key (3) with value 3 in the cache. 
-print(cache.cache)
-cache.get(2); #// returns -1 (not found) 
-print(cache.cache)
+print(cache.cache) #OrderedDict([(1, 1), (3, 3)])
+cache.get(2) #// returns -1 (not found) 
+print(cache.cache) OrderedDict([(1, 1), (3, 3)])
 cache.put(4, 4) #/ evicts key 1 and store a key (4) with value 4 in the cache. 
-print(cache.cache)
+print(cache.cache) #OrderedDict([(3, 3), (4, 4)])
 cache.get(1); #// returns -1 (not found) 
 cache.get(3); #// returns 3 
+print(cache.cache) #OrderedDict([(3, 3), (4, 4)])
 cache.get(4); #// returns 4
+print(cache.cache) #OrderedDict([(3, 3), (4, 4)])
+
 
 
 cache = LRUCache(2)
