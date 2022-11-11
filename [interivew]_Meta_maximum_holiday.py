@@ -36,7 +36,7 @@ findh(l_list,pto)
                    
                    
                    
-def findH(l,pto):
+def findconsecutiveH(l,pto):
     res=0
     if len(l)==1 and l[0]=='H':
         res=1
@@ -53,4 +53,4 @@ def findH(l,pto):
         
     return res
 
-findH(l,pto)            
+findconsecutiveH(l,pto)            
