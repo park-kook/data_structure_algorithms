@@ -33,3 +33,26 @@ def equilibrium(nums):
     return -1
 
 equilibrium(nums)
+
+
+
+
+
+nums = [0,1,5,2,-4,-3,-1] #sum = 0
+
+nums = [-7,1,5,2,-4,3,0] #sum = 0
+def equilibrium3(nums):
+    l_sum = 0
+#    length = len(nums)
+    total_sum = sum(nums) # #um = 0
+    for i in range(len(nums)):
+
+        total_sum-=nums[i] #right sum
+
+        if total_sum == l_sum:
+            return i
+        
+        l_sum+= nums[i] #left sum
+    return -1
+ 
+equilibrium3(nums)
