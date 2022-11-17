@@ -40,28 +40,7 @@ arr1 = [4,9,5]
 arr2 = [9,4,9,8,4]
 
 printIntersection(arr1, arr2)
-# Write a function that prints a dictionary where keys are between 1 and 20 and their corresponding values are the square of the keys
-def dictionary():
-    a={}
-    
-    for x in range(20):
-        a[x] = x^2
-    print(a)
-#    return a
 
-dictionary()
-#    A={}
-    A = {x: x^2 for x in range(20)}
-    print(A)
-    
-dict2()
-
-# Output all numbers between 0 and 100 that are divisible by 2 and 5, using list comprehension.
-
-[x for x in range(100) if x%5==0 and x%2==0]
-
-[x if x%5==0 and x%2==0 else None for x in range(100)]
-#[x if x%5==0 and x%2==0 for x in range(100)]
 i=4
 def intersection(arr1, arr2):
     
@@ -161,6 +140,7 @@ Def dict():
 print(A)
 
 
+---
 
 ###### Q2 ######
 # Output all numbers between 0 and 100 that are divisible by 2 and 5, using list comprehension.
@@ -177,3 +157,9 @@ Def all():
 a = [x for x in range(10)]
 
 b = {x:None for x in range(10) }
+
+
+[x for x in range(100) if x%5==0 and x%2==0]
+
+[x if x%5==0 and x%2==0 else None for x in range(100)]
+#[x if x%5==0 and x%2==0 for x in range(100)]
