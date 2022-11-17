@@ -36,3 +36,49 @@ def alienOrder(self, words: List(str))->str:
             # Invalid case
             return ""
     returun "".join(res[::-1])
+    
+    
+    
+    
+    
+    
+    
+    
+    [d > b, c > d, c > a]
+Input = ['ccda', 'ccbk', 'cd', 'a', 'ab', 'abc']
+def reconstruct(Input):
+    in_degree2 = {c:0 for word in Input for c in word} 
+    adj_list = defaultdict(list)
+    output = []
+    for i in range(1,len(Input)):
+        for letter1, letter2 in zip(Input[i-1],Input[i]):
+            if letter1 != letter2:
+#                if letter2 not in adj_list:
+                adj_list[letter1].append(letter2)
+                in_degree2[letter2]+=1
+                
+                
+#                output.append((letter1,letter2))               
+                break
+            
+    queue = deque([c for c in in_degree2 if in_degree2[c] == 0])
+    
+    while queue: 
+        c = queue.popleft()
+        output.append(c)
+        
+        for d in adj_list[c]:
+            in_degree2[d]-=1
+            if in_degree2[d]==0:
+                queue.append(d)
+                
+                
+    # If not all letters are in output, that means there was a cycle and so
+    # no valid ordering. Return "" as per the problem description.
+    if len(output) < len(in_degree):
+        return ""
+    return "".join(output)
+
+
+reconstruct(Input)
+output[0][0]
