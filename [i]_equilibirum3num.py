@@ -56,3 +56,4 @@ def equilibrium3(nums):
     return -1
  
 equilibrium3(nums)
+nums = [0,1,5,2,-4,-3,-1] #sum = 0
