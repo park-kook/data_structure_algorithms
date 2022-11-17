@@ -15,9 +15,9 @@ mat = [
     [10,17,22],
 ]
 
-n=len(mat)
+m=len(mat[0])
 
-def search(mat, n, x):
+def search(mat, m, x):
     i = 0
      
     # set indexes for top right element
@@ -38,4 +38,4 @@ def search(mat, n, x):
      
     print("Element not found")
     return False # if (i == n || j == -1 )
-search(mat, n, x)
+search(mat, m, x)
