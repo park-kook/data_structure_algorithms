@@ -38,6 +38,11 @@ valid('(())')
 valid('((())')
 valid('(()))')
 
+a = [x for x in range(10)]
+#[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+b = {x:None for x in range(10) }
+
 '''
 JPMC interview
 '''
