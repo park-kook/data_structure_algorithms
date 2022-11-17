@@ -8,7 +8,7 @@ def valid(s):
     check=set('()[]{}')
 #    match= set([('(',')'),('[',']'),('{','}')])
     result=[]
-    alp = set('abc')
+
     
 #    if len(s)%2 !=0:
 #        return False
