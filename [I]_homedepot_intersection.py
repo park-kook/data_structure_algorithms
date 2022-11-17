@@ -77,6 +77,7 @@ a=[1,2]
 b=a
 b[1] = -2
 a[1]+b[1]
+#=-4
 
 
 a=[1,2]
@@ -87,7 +88,7 @@ a[1]+b[1]
 
 a=(1,2)
 a[1]=0
-a
+T#ypeError: 'tuple' object does not support item assignment
 
 # Time Allowed: ~30 Minutes 
 
