@@ -156,11 +156,23 @@ Def all():
     
     
 a = [x for x in range(10)]
+#[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 b = {x:None for x in range(10) }
-
+'''
+{0: None,
+ 1: None,
+ 2: None,
+ 3: None,
+ 4: None,
+ 5: None,
+ 6: None,
+ 7: None,
+ 8: None,
+ 9: None}
+'''
 
 [x for x in range(100) if x%5==0 and x%2==0]
-
+#[0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
 [x if x%5==0 and x%2==0 else None for x in range(100)]
 #[x if x%5==0 and x%2==0 for x in range(100)]
