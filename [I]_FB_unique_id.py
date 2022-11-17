@@ -40,3 +40,22 @@ def solution(id_list):
 
 solution([2,4,2,13,4])
 solution([3,3,5,2,2])
+
+
+
+def removeDuplicates(string): 
+    result=[] 
+    seen=set() 
+    
+    for char in string: 
+        if char not in seen: 
+            seen.add(char) 
+            result.append(char)
+            
+    return ''.join(result) 
+
+
+removeDuplicates('tree traversal')
+
+string='tree traversal'
+
