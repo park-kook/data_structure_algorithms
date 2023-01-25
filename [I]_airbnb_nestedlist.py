@@ -81,7 +81,10 @@ class Bolleanhasnext:
     def next(self):
         self._position+=1
         return self._integers[self._position]
-    
+      
+    def hasNext(self):
+        return self._position +1< len(self._integers)
+     
     def remove(self):
         def remove2(input):
     
@@ -93,9 +96,19 @@ class Bolleanhasnext:
                         remove2(element)
         remove2(input)
         return self._integers[self._position]
-    
-    def hasNext(self):
-        return self._position +1< len(self._integers)
+       
+       
+# second alternative option of remove above    
+    def delete(self):
+        def delete2(input):
+            for element in input:
+                if type(element) == list:
+                    delete2(element)
+                else:
+                    if self._integers[self._position] in input:
+                        input.remove(self._integers[self._position])
+        delete2(input)
+        return self._integers[self._position]
         
 iter = Bolleanhasnext(input)   
 print(iter.next())       
