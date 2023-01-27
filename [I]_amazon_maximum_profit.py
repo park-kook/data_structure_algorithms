@@ -44,8 +44,8 @@ def maxProfit(stock_prices):
     l,r=0,1
     maxP = 0
     while r < len(stock_prices):
-        if prices[l] < prices[r]:
-            profit = prices[r] - prices[l]
+        if stock_prices[l] < stock_prices[r]:
+            profit = stock_prices[r] - stock_prices[l]
             maxP = max(maxP, profit)
         else: 
             l=r
