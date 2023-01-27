@@ -62,6 +62,8 @@ which has the largest product
 """
 nums = [2,3,-2,4]
 output = 6
+nums = [-2,3,-2,4] #output = 48
+nums = [0,3,-2,4] #output = 4
 
 def maxProduct(nums):
     res = max(nums)
