@@ -55,31 +55,6 @@ def maxProfit(stock_prices):
 maxProfit([12,11,15,3,10])
 
 
-"""
-Maximum Product Subarray
-Given an integer array nums, find the contiguous subarray within an array (continaing at least one number) 
-which has the largest product
-"""
-#nums = [2,3,-2,4] #output = 6
-
-nums = [-2,3,-2,4] #output = 48
-#nums = [0,3,-2,4] #output = 4
-
-def maxProduct(nums):
-    res = max(nums)
-    curMin, curMax = 1,1
-    
-    for n in nums:
-        if n ==0:
-            curMin, curMax = 1,1 
-            continue 
-        tmp = curMax * n #-2, -6, -6, 48
-        curMax = max(n*curMax, n*curMin, n) #-2, 3, 12 from -6 min * -2 n = 12, 48
-        curMin = min(tmp, n*curMin, n) #-2, -6, -6, -24
-        res = max(res, curMax)# -2, -2, 12, 48
-    return res
-
-maxProduct(nums)
     
 
 
@@ -130,3 +105,32 @@ profit2([12,11,15,3,10])
 # Exception Raised
 profit2([1])
 profit2([30,22,21,5])
+
+
+
+
+"""
+Maximum Product Subarray
+Given an integer array nums, find the contiguous subarray within an array (continaing at least one number) 
+which has the largest product
+"""
+#nums = [2,3,-2,4] #output = 6
+
+nums = [-2,3,-2,4] #output = 48
+#nums = [0,3,-2,4] #output = 4
+
+def maxProduct(nums):
+    res = max(nums)
+    curMin, curMax = 1,1
+    
+    for n in nums:
+        if n ==0:
+            curMin, curMax = 1,1 
+            continue 
+        tmp = curMax * n #-2, -6, -6, 48
+        curMax = max(n*curMax, n*curMin, n) #-2, 3, 12 from -6 min * -2 n = 12, 48
+        curMin = min(tmp, n*curMin, n) #-2, -6, -6, -24
+        res = max(res, curMax)# -2, -2, 12, 48
+    return res
+
+maxProduct(nums)
