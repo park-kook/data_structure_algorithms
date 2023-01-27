@@ -42,7 +42,9 @@ solution([2,4,2,13,4])
 solution([3,3,5,2,2])
 
 
-
+'''
+remove duplicate letter in the string. 
+'''
 string = 'tree traversal'
 
 def removeDuplicates(string): 
