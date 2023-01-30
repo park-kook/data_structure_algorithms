@@ -1,4 +1,15 @@
+'''
+#simulate a series of coin tosses where 0 is heads and 1 is tails. You could do this:
+from random import random
+results = []
+for x in range(10):
+    results.append(int(round(random())))
+    
+results = [int(round(random())) for x in range(10)]
+'''
+
 a=[('blue',5),('red',4),('yellow',1)]
+
 #9,8,7,6,5, 4,3,2,1, 0
 output is the name of thje color picked, the colr is picked based on frequency (second element in tuple)
 a[0][1]
