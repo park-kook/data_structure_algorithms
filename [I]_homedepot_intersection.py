@@ -59,11 +59,12 @@ def intersection(arr1, arr2):
 
         if i in dict_2:
 
-            res+=(str(i)*int(min(dict_1[i], dict_2[i]))) #"4499'
+            res+=(str(i)*int(min(dict_1[i], dict_2[i]))) #"94'
 #            ','.join(res)
 #            res.append(str(i)*int(min(dict_1[i], dict_2[i])/min(dict_1[i], dict_2[i])))  
 #            res.append(str(i)*int(min(dict_1[i], dict_2[i]))) 
             res = [int(i) for i in res]
+            #[9,4]
     return res
 
 intersection(arr1, arr2)
