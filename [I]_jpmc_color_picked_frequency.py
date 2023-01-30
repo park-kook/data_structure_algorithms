@@ -17,26 +17,25 @@ import random
 
 random.random()
 
-def pickColor(a):
-    res = []
-    total = 0
-    interval_d=[]
-    
-    for l in a:
-     
-        x,y = l
-        res.append(y)
-    total = sum(res)
-    
-    
-    roll = random.randint(0,total-1)         
+#leetcode #528, random pick with weight
+import random
+a=[('blue',5),('red',4),('yellow',1)]
+def rand_pick(a):
 
-    if roll>=res[0] :
-        result = 'blue'
-    elif roll>=res[2]:
-        result = "yellow"
-    else:
-        result = "red"
+    color_l=[]
+    cum_freq=[]
+    total=0
+    for tup in a: 
+        color, freq = tup
+        total += freq
+        color_l.append(color)
+        cum_freq.append(total)
 
-    return result
-pickColor(a)
+
+
+    roll = random.random()*total
+    for i, cum_w in enumerate(cum_freq):
+        if roll < cum_w:
+            return color_l[i]
+rand_pick(a)
+
