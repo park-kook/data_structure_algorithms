@@ -138,9 +138,12 @@ Order by sum(cost) desc
 
 Def dict():
     A={}
-     A = {x: x^2 for x in range(20)}
-print(A)
+    for i in range(1,21):
+        A[i] = i**2
+    return A
+dict()
 
+#A = {x: x**2 for x in range(20)}
 
 ---
 
