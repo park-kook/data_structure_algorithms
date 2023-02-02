@@ -91,7 +91,10 @@ def reconstruct(Input):
 reconstruct(Input)
 output[0][0]
 
-
+#'ABC' 
+#adj_list = defaultdict(list, {'A': ['B','C'], 'B': ['C']})
+#deque(['A'])<-B, <-C
+#in_degree = {'A': 0, 'B': 1, 'C': 2}
 
 
 words=["A", "BA", "BC", "C"]
