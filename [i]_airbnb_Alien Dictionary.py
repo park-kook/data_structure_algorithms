@@ -48,6 +48,12 @@ we need to reverse order. ABC
     
     [d > b, c > d, c > a]
 Input = ['ccda', 'ccbk', 'cd', 'a', 'ab', 'abc']
+ #'ckdab' 
+#adj_list = defaultdict(list, {'d': ['b'], 'c': ['d', 'a']})
+#deque(['c', 'k'])<-d, <-a <-b
+#in_degree = {'c': 0, 'd': 1, 'a': 1, 'b': 1, 'k': 0}
+for c in in_degree:
+    
 def reconstruct(Input):
     in_degree2 = {c:0 for word in Input for c in word} 
     adj_list = defaultdict(list)
