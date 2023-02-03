@@ -177,54 +177,9 @@ practice
 for key, value in adj_list.items():
     print(key)
     print(value)
-from collections import defaultdict
+
 from collections import defaultdict, Counter, deque
-adj_list = defaultdict(set)
-in_degree = Counter({c : 0 for word in Input for c in word})
 
-
-for i in range(1,len(Input)):
-    for letter1, letter2 in zip(Input[i-1],Input[i]):
-        print(letter1, letter2)
-        
-
-words= ['ccda', 'ccbk', 'cd', 'a', 'ab', 'abc']   
-def alienOrder(words):
-#    adj = {c:set() for w in words for c in w} 
-    adj = defaultdict(list)
-    #{'c': set(), 'd': set(), 'a': set(), 'b': set(), 'k': set()}
-    for i in range(1,len(words)):
-        w1, w2 = words[i-1], words[i]
-        min_len = min(len(w1),len(w2))
-#        if len(w1) > len(w2) and w1[:min_len] == w2[:min_len]:
-#            return ""
-        for j in range(min_len):
-            if w1[j]!=w2[j]:
-#                adj[w1[j]].add(w2[j])
-                adj[w1[j]].append(w2[j])
-                break
-    visit={}
-    res = []
-    def dfs(c):
-        if c in visit:
-            return True
-        visit[c] = True
-        for n in adj[c]:
-            if dfs(n):
-                return True
-        res.append(c)
-        visit[c] = False
-        
-    
-    for c in adj:
-        if dfs(c):
-            return ""
-    return "".join(res[::-1])
-alienOrder(words)
-
-
-for c in adj:
-    print(c)
 '''
 Sorting Dict by value & storing sorted keys in Dict_keys
 '''
