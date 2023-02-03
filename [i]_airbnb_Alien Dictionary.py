@@ -169,12 +169,10 @@ def alienOrder(words):
 alienOrder(words)
 
 
- if adj[c]:
-     print(True)
- print(False)
-c="A"
 
-
+'''
+practice
+'''
 
 for key, value in adj_list.items():
     print(key)
