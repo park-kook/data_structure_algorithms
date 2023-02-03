@@ -34,9 +34,9 @@ def rand_pick(a):
 
 
 #     roll = random.random()*total
-    roll = random.randint(1,10)
+    roll = random.randint(1,cum_freq[-1])
     for i, cum_w in enumerate(cum_freq):
-        if roll < cum_w:
+        if roll <= cum_w:
             return color_l[i]
 rand_pick(a)
 
