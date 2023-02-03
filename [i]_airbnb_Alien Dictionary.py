@@ -41,36 +41,59 @@ decendent, and then A print
 CBA
 we need to reverse order. ABC
 ''' 
+'''
+Interview AirBnB alien dictionary 
+# You have found a list of alien words. 
+You know for a fact that words in this list are sorted, but you don’t know what the alphabet is. 
+You would like to reconstruct the original alphabet in such a way, 
+that the ordering between letters would explain the sorting of the list.
+
+#Input: ['ccda', 'ccbk', 'cd', 'a', 'ab', 'abc']
+# #Output: ['c', 'a', 'k', 'd', 'b'], ['c', 'd', 'a', 'b' 'k'], ['c', 'a', 'd', 'k', 'b'], ['k', 'c', 'a', 'd', 'b'] # k can go anywhere
+# ccda < ccbk 
+# d < b
+# d>b, c>d, c>a, nothing > b, nothing>c
+# c>d>b
+
+
+1. Compare 2 words in order 
+    - We don't get information when 2 letters are the same
+    - When we have a difference, then we know the letter from the first word is higher order in the alphabet
+    [d > b, c > d, c > a] --> [c > d > b > a (a anywhere after c)] 
     
+2. Check all letters present in words are part of alphabet
+
+a: []
+d: [b]
+b: []
+c: [a, d]
+k: []
     
-    
-    
-    
-    [d > b, c > d, c > a]
+'''    
+[d > b, c > d, c > a]
 Input = ['ccda', 'ccbk', 'cd', 'a', 'ab', 'abc']
  #'ckdab' 
 #adj_list = defaultdict(list, {'d': ['b'], 'c': ['d', 'a']})
 #deque(['c', 'k'])<-d, <-a <-b
 #in_degree = {'c': 0, 'd': 1, 'a': 1, 'b': 1, 'k': 0}
-for c in in_degree:
-    
+
+'''
+version 1
+'''
 def reconstruct(Input):
     in_degree2 = {c:0 for word in Input for c in word} 
     adj_list = defaultdict(list)
     output = []
     for i in range(1,len(Input)):
         for letter1, letter2 in zip(Input[i-1],Input[i]):
-            if letter1 != letter2:
-#                if letter2 not in adj_list:
+            if letter1 != letter2: #letter1='c', letter2='c'
                 adj_list[letter1].append(letter2)
                 in_degree2[letter2]+=1
-                
-                
-#                output.append((letter1,letter2))               
+           #in_degree2 = {'c': 0, 'd': 1, 'a': 1, 'b': 1, 'k': 0}
                 break
             
-    queue = deque([c for c in in_degree2 if in_degree2[c] == 0])
-    
+    queue = deque([c for c in in_degree2 if in_degree2[c] == 0]) 
+    #deque(['c', 'k'])<-d, <-a <-b
     while queue: 
         c = queue.popleft()
         output.append(c)
@@ -83,13 +106,12 @@ def reconstruct(Input):
                 
     # If not all letters are in output, that means there was a cycle and so
     # no valid ordering. Return "" as per the problem description.
-    if len(output) < len(in_degree):
-        return ""
+#     if len(output) < len(in_degree):
+#         return ""
     return "".join(output)
 
 
 reconstruct(Input)
-output[0][0]
 
 #'ABC' 
 #adj_list = defaultdict(list, {'A': ['B','C'], 'B': ['C']})
@@ -100,9 +122,10 @@ output[0][0]
 words=["A", "BA", "BC", "C"]
 output = "ABC"
 words = ["wrt", "wrf", "er", "ett", "rftt"]
-
 output = "wertf"
-
+'''
+version 2
+'''
 
 def alienOrder(words):
     adj ={c:set() for w in words for c in w}
@@ -151,98 +174,22 @@ alienOrder(words)
  print(False)
 c="A"
 
-'''
-Interview AirBnB alien dictionary 
-# You have found a list of alien words. 
-You know for a fact that words in this list are sorted, but you don’t know what the alphabet is. 
-You would like to reconstruct the original alphabet in such a way, 
-that the ordering between letters would explain the sorting of the list.
-
-#Input: ['ccda', 'ccbk', 'cd', 'a', 'ab', 'abc']
-# #Output: ['c', 'a', 'k', 'd', 'b'], ['c', 'd', 'a', 'b' 'k'], ['c', 'a', 'd', 'k', 'b'], ['k', 'c', 'a', 'd', 'b'] # k can go anywhere
-# ccda < ccbk 
-# d < b
-# d>b, c>d, c>a, nothing > b, nothing>c
-# c>d>b
 
 
-1. Compare 2 words in order 
-    - We don't get information when 2 letters are the same
-    - When we have a difference, then we know the letter from the first word is higher order in the alphabet
-    [d > b, c > d, c > a] --> [c > d > b > a (a anywhere after c)] 
-    
-2. Check all letters present in words are part of alphabet
-d: 0
-b: 1
-c: 0
-d: 1
-c: 0
-a: 1
-d:[0,1], b:1, c: 0, a: 1
-
-a: []
-d: [b]
-b: []
-c: [a, d]
-k: []
-
-'''
 for key, value in adj_list.items():
     print(key)
     print(value)
-
+from collections import defaultdict
 from collections import defaultdict, Counter, deque
 adj_list = defaultdict(set)
 in_degree = Counter({c : 0 for word in Input for c in word})
 
-#in_degree2={}
-#for i in Input:
-#    for j in i:
-#
-#        in_degree2[j]=1+in_degree2.get(j,0)
-{c:0 for word in Input for c in word}        
-
-[d > b, c > d, c > a]
-Input = ['ccda', 'ccbk', 'cd', 'a', 'ab', 'abc']
-def reconstruct(Input):
-    in_degree2 = {c:0 for word in Input for c in word} 
-    adj_list = defaultdict(list)
-    output = []
-    for i in range(1,len(Input)):
-        for letter1, letter2 in zip(Input[i-1],Input[i]):
-            if letter1 != letter2:
-#                if letter2 not in adj_list:
-                adj_list[letter1].append(letter2)
-                in_degree2[letter2]+=1
-                
-                
-#                output.append((letter1,letter2))               
-                break
-            
-    queue = deque([c for c in in_degree2 if in_degree2[c] == 0])
-    
-    while queue: 
-        c = queue.popleft()
-        output.append(c)
-        
-        for d in adj_list[c]:
-            in_degree2[d]-=1
-            if in_degree2[d]==0:
-                queue.append(d)
-    return "".join(output)
-
-
-reconstruct(Input)
-output[0][0]
-
-Input= ['ccda', 'ccbk', 'cd', 'a', 'ab', 'abc']        
-print(reconstruct(Input))
 
 for i in range(1,len(Input)):
     for letter1, letter2 in zip(Input[i-1],Input[i]):
         print(letter1, letter2)
         
-from collections import defaultdict
+
 words= ['ccda', 'ccbk', 'cd', 'a', 'ab', 'abc']   
 def alienOrder(words):
 #    adj = {c:set() for w in words for c in w} 
