@@ -25,7 +25,7 @@ def longestPalindrome(s):
   resultLen = 0
   for i in range(len(s)):
     
-#output even length
+#output odd length palindromes
     l,r = i,i
     while l>=0 and r<len(s) and s[l] ==s[r]:
       if r-l+1 > resultLen:
@@ -34,7 +34,7 @@ def longestPalindrome(s):
       l-=1
       r+=1
       
-#output odd length
+#output even length palindromes
 #The edge case (and reason for the seemingly redundant code) is that the above grabs 
 #odd length palindromes by starting with 1 index and expanding outwards. 
 #You can grab the even case by doing the while loop again, 
