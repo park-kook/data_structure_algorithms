@@ -40,7 +40,7 @@ def longestPalindrome(s):
 
       
       
-#for output odd length palindromes, the following script is additionally added
+#for output odd length palindromes, the following script should be additionally added
 
 #The edge case (and reason for the seemingly redundant code) is that the above grabs 
 #odd length palindromes by starting with 1 index and expanding outwards. 
