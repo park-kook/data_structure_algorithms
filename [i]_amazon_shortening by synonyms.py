@@ -16,8 +16,8 @@ min(syns.get('wonderful',0))
 #'nice'
 syns.get('whether',0)
 #['asif', 'if']
-max(syns.get('whether',0))
-#'if'
+max(syns.get('whether',0), key = len)
+#'asif'
 len(syns['wonderful'])
 #2
 syns['wonderful'][0]
@@ -28,7 +28,7 @@ def ss1(s: str, syns:  Dict, tl: int):  # len(output) <= tl
     res = []
     final_outcome = []
     for i in syns:
-      syns[i] = min(syns.get(i,0))
+      syns[i] = min(syns.get(i,0), key=len)
       #syns - {'wonderful': 'nice', 'whether': 'asif', 'alone': 'lonely'}
     for i in s:
       if i in syns:
