@@ -35,8 +35,7 @@ def ss1(s: str, syns:  Dict, tl: int):  # len(output) <= tl
         if len(i) < len(syns[i]):
           res.append(i)
         else:
-          i = syns[i]
-          res.append(i)
+          res.append(syns[i])
       else:
         res.append(i)
         
