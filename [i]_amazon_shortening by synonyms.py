@@ -12,7 +12,7 @@ s = "Walking in the park is wonderful regardless whether alone or not"
 syns={'wonderful':['pretty','nice'], 'whether':['asif', 'if'], 'alone': ['lonely'] }
 
 key_to_value_len = {k:[len(v) for v in v] for k, v in syns.items()}
-min(syns.get('wonderful',0))
+min(syns.get('wonderful',0), key=len)
 #'nice'
 syns.get('whether',0)
 #['asif', 'if']
