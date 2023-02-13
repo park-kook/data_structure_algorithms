@@ -57,3 +57,21 @@ def equilibrium3(nums):
  
 equilibrium3(nums)
 nums = [0,1,5,2,-4,-3,-1] #sum = 0
+
+
+
+
+
+
+
+def pivotIndex(nums):
+    left, pivot, right = 0, 0, sum(nums)-nums[0]
+    while pivot < len(nums)-1 and right != left:
+        pivot += 1
+        right -= nums[pivot]
+        left += nums[pivot-1]
+ 
+    return pivot if left == right else -1
+
+
+pivotIndex(nums)
