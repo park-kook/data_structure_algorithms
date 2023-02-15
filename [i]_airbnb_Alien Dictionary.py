@@ -80,6 +80,8 @@ Input = ['ccda', 'ccbk', 'cd', 'a', 'ab', 'abc']
 '''
 version 1
 '''
+
+from collections import defaultdict, Counter, deque
 def reconstruct(Input):
     in_degree2 = {c:0 for word in Input for c in word} 
     adj_list = defaultdict(list)
