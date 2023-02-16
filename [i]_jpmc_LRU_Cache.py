@@ -17,6 +17,10 @@ If the last is False then this method would delete a key from the beginning of t
 This serves as FIFO(First In First Out) in the queue 
 otherwise it method would delete the key from the end of the dictionary.
 
+move_to_end(key, last = True)
+If the last is True then this method would move an existing key of the dictionary in the end o
+therwise it would move an existing key of the dictionary in the beginning. 
+If the key is moved at the beginning then it serves as FIFO ( First In First Out ) in a queue.
 https://www.geeksforgeeks.org/methods-of-ordered-dictionary-in-python/
 
 '''
