@@ -56,7 +56,7 @@ class LRUCache:
     # If so we remove the first key (least recently used)
 #    def put(self, key: int, value: int) -> None:
     def put(self, key, value):
-        self.cache[key] = value
+        self.cache[key] = value #added from the end
         self.cache.move_to_end(key)
         if len(self.cache) > self.capacity:
             self.cache.popitem(last = False)
