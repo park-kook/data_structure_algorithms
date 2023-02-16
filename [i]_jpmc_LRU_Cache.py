@@ -59,7 +59,7 @@ class LRUCache:
         self.cache[key] = value #added from the end
         self.cache.move_to_end(key)
         if len(self.cache) > self.capacity:
-            self.cache.popitem(last = False)
+            self.cache.popitem(last = False) #delete from the beginning
 
 cache = None        
 cache = LRUCache(2)
