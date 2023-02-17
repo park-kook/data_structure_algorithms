@@ -11,6 +11,7 @@ input s='()[]{}"
 output: true
 input: s='(]'
 output: false
+Time complexity o(N), space complexity o(N)
 '''
 
 
@@ -29,17 +30,17 @@ def valid(s):
         if i not in check:
             continue
             
-        if i in initvalid:
+        if i in initvalid:  #opened bracket and saved it into the result list with the number of opened bracket
             result.append(i)
         else: 
-            if len(result)==0:
+            if len(result)==0: # starting from closed bracket, no matter what it should be False
                 return False
-#            second = result.pop()
-            result.pop()
-#            if (second,i) in match:
-#                return True
-#            else: 
-#                return False
+           second = result.pop()
+
+           if (second,i) in match:
+               continue
+           else: 
+               return False
         
     return len(result)==0
         
@@ -82,7 +83,7 @@ def valid_p(s):
 
             second = result.pop()
             if (second,i) in match: 
-                return True
+               continue
             else: 
                 return False
 
@@ -96,4 +97,40 @@ for n in range(len(a)):
 
     [x for in range(10)]
     {x:None for in range(10)}
+
     
+ '''
+ Geeksforgeeks version
+ '''
+ def areBracketsBalanced(expr):
+    stack = []
+ 
+    # Traversing the Expression
+    for char in expr:
+        if char in ["(", "{", "["]:
+ 
+            # Push the element in the stack
+            stack.append(char)
+        else:
+ 
+            # IF current character is not opening
+            # bracket, then it must be closing.
+            # So stack cannot be empty at this point.
+            if not stack:
+                return False
+            current_char = stack.pop()
+            if current_char == '(':
+                if char != ")":
+                    return False
+            if current_char == '{':
+                if char != "}":
+                    return False
+            if current_char == '[':
+                if char != "]":
+                    return False
+ 
+    # Check Empty Stack
+    if stack:
+        return False
+    return True
+ 
