@@ -33,7 +33,7 @@ def fund(cwd,cd):
   res =''
   if cd_l[0]=='': #if cd starts from / then delete all currnet path. 
     cwd_l=[]
-  if cwd =='/':
+  if cwd =='/': #cwd_l = ["",""] then second missing needs to be removed. 
     cwd_l.pop()
     
   for i in range(len(cd_l)):
