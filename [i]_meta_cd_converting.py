@@ -26,6 +26,10 @@ cd="../p/../q" #['..','p','..','q']
 
 cwd="/x/y" #['','x','y']
 cd="/p/./q" #['','p','.','q']
+
+cwd=['','']
+'/'.join(cwd)
+outcome: '/'
 '''
 def fund(cwd,cd):
   cwd_l = cwd.split('/')
@@ -64,7 +68,7 @@ def fund(cwd,cd):
       #continue #cd_l == '..' remove in the loop      
     if cd_l[i] =='.':
       continue
-    elif cd_l[i] = !='..' and cd_l[!='':
+    elif cd_l[i] = !='..' and cd_l[i]!='':
       cwd_l.append(cd_l[i])
   res = '/'.join(cwd_l)
   return res if res!='' else '/'
