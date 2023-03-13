@@ -75,7 +75,7 @@ def downwardDiagonal(A):
     ro = r
     co=column-1
     #while co>=1 and ro>=row-1:
-    while ro>=row-1:
+    while ro<=row-1:
       print(A[ro][co], end = " ")
       ro+=1
       co-=1
