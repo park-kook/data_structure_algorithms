@@ -3,7 +3,7 @@
 a = [abc, a"bc, d;fc]
 
 condition1 if string has " in the one of the strings, then ""
-condition2 if string has ; in the one of the strings, then "sting"
+condition2 if string has ; in the one of the strings, then "string"
 condition3 abc; a"bc; d;fc
 
 def 
