@@ -23,5 +23,5 @@ def converts(array):
       if j='"':
         i=i.replace('"','""')
     res.append(i)
-  return ';'.join(res)
+  return '; '.join(res)
 converts(array)                
