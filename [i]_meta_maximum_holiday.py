@@ -7,6 +7,7 @@ Space Complexity : O(1)
 '''
 l_list=['W','W']
 l_list=['W','W','H','H','W','W','H']
+output = 5
 pto=2
 count['H']
 count['H']
@@ -30,8 +31,19 @@ def findh(l_list,pto):
 findh(l_list,pto)
 
                    
-                   
-     
+def holiday(l, pto):
+                    
+    d={}
+    l = 0
+    ma = 0
+    for r in range(len(l)):
+       d[l[r]] = 1+d.get(l[r],0)
+       if d['W']> pto:
+            l+=1
+            d['W']-=1
+       ma = max(ma,r-l+1)
+    return ma
+holiday(l, pto)  
                    
                    
                    
