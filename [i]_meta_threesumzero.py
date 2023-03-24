@@ -1,5 +1,11 @@
 '''
 #meta mock interview
+threeSum([-1,0])        
+threeSum([-1,0,1,2,-1,-4])    
+->[[-1,-1,2],[-1,0,1]]
+
+threeSum([-2,-2,0,0,2,2])  
+
 '''
     def threeSum(nums):    
         """
@@ -23,7 +29,7 @@
                 if nums[l]+nums[r] == target:
                     result.append([nums[i], nums[l], nums[r]])
                     l = l+1
-                    while l<r and nums[l] == nums[r-1]:
+                    while l<r and nums[l] == nums[l-1]:
                         l = l+1
                 elif nums[l] + nums[r] < target:
                     l += 1
@@ -32,9 +38,7 @@
         return result
     
 
-threeSum([-1,0])        
-threeSum([-1,0,1,2,-1,-4])    
-threeSum([-2,-2,0,0,2,2])  
+
 
 
 
