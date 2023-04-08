@@ -1,6 +1,6 @@
 '''
 Airbnb - interview
-'''
+
 
 # Please join the video conference through the chat window in the bottom right
 
@@ -29,7 +29,7 @@ Airbnb - interview
 # print(input) -> [[],[1,2],[4,5],[],[],[6],[7,8],[],[9],[10],[]]
 # iter.next() → 4
 # input2 = [[5],[4],[3]]
- 
+''' 
 if type(i) == list:
     numerator += sum(i)
 if type(i) == int:
