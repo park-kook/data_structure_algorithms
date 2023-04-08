@@ -30,13 +30,14 @@ Airbnb - interview
 # iter.next() → 4
 # input2 = [[5],[4],[3]]
 ''' 
+'''
 if type(i) == list:
     numerator += sum(i)
 if type(i) == int:
     numerator += i
       
-isinstance([], int)
-_integers = []
+isinstance(i, int)
+
 def l_list(input_list):
     
     for list_integer in input_list:   
@@ -60,7 +61,7 @@ def remove(input,x):
                 remove(element,x)
         
 remove(input,9)  
-
+'''
 input = [[],[1,2,3],[4,5],[],[],[6],[7,8],[],[9],[10],[]]                 
 # isinstance(my_variable, int)
 class Bolleanhasnext:
