@@ -68,17 +68,20 @@ class Bolleanhasnext:
     def __init__(self, input):
         self._integers = []
         self._position = -1
-#        self.input2 = input
-        def l_list(input_list):
 
-            for list_integer in input_list:   
-#                if isinstance(list_integer, int):
-                if type(list_integer)==int:                    
-                    self._integers.append(list_integer)
-                else:
-                    l_list(list_integer)
+#         def l_list(input_list):
 
-        l_list(input)
+#             for list_integer in input_list:   
+# #                if isinstance(list_integer, int):
+#                 if type(list_integer)==int:                    
+#                     self._integers.append(list_integer)
+#                 else:
+#                     l_list(list_integer)
+
+#         l_list(input)
+        self._integers = [item if isinstance(item, int) else i for item in items for i in item]
+        #-->[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ 
     def next(self):
         self._position+=1
         return self._integers[self._position]
