@@ -79,7 +79,7 @@ class Bolleanhasnext:
 #                     l_list(list_integer)
 
 #         l_list(input)
-        self._integers = [item if isinstance(item, int) else i for item in items for i in item]
+        self._integers = [item if isinstance(item, int) else i for item in input for i in item]
         #-->[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
  
     def next(self):
