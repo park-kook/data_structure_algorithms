@@ -79,6 +79,8 @@ class Bolleanhasnext:
 #                     l_list(list_integer)
 
 #         l_list(input)
+        ##### below list comprehension for double loop - first iteration item and if/else condition
+        ##### and then starting from first iteration for loop then second iteration for lopp
         self._integers = [item if isinstance(item, int) else i for item in input for i in item]
         #-->[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
  
