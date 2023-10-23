@@ -68,7 +68,7 @@ class Bolleanhasnext:
     def __init__(self, input):
         self._integers = []
         self._position = -1
-
+        self.input = input #may be or may be not
 #         def l_list(input_list):
 
 #             for list_integer in input_list:   
