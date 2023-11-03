@@ -38,9 +38,14 @@ def solution(id_list):
     
     return unique_id
 
-solution([2,4,2,13,4])
-solution([3,3,5,2,2])
+solution([2,4,2,13,4]) ->13
+solution([3,3,5,2,2]) ->5
+solution([3,3,5,5,2,2,2]) ->2
 
+2^4 = 6
+6^2 = 4
+4^13 = 9
+9^3 = 13
 
 '''
 remove duplicate letter in the string. 
