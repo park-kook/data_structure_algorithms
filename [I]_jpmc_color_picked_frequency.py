@@ -12,7 +12,7 @@ results = [int(round(random())) for x in range(10)]
 a=[('blue',5),('red',4),('yellow',1)]
 
 #9,8,7,6,5, 4,3,2,1, 0
-output is the name of thje color picked, the colr is 
+output is the name of the color picked, the color is 
 picked based on frequency (second element in tuple)
 a[0][1]
 import random
