@@ -34,8 +34,19 @@ def equilibrium(nums):
 
 equilibrium(nums)
 
-
-
+nums = [-7, 1,5,2, -4, 3, 0]
+def equalibrium(nums):
+    total_sum = sum(nums)
+    left_sum = 0
+    output = []
+    for i in range(1, len(nums)):
+        left_sum += nums[i-1]
+        right_sum = total_sum-left_sum-nums[i]
+        if left_sum == right_sum:
+            output.append(i)
+            #return i
+    #return -1
+    return output
 
 
 nums = [0,1,5,2,-4,-3,-1] #sum = 0
