@@ -6,15 +6,20 @@
 Alien Dictionary - Hard
 There is a new alien language that uses the English alphabe. However, 
 the order among the letters is unknown to you. 
-You are given a list of strings words from the alien langugage's dictionary, where the strings in words
+You are given a list of strings words from the alien langugage's dictionary, 
+where the strings in words
 are sorted lexicographically by the rules of this new language. 
 
-Return a string of the unique letters in the new alien lagngugae sorted in lexicographically
-increasing order by the new langugage's rules. If there is no solution, return "". If there are 
+Return a string of the unique letters in the new alien lagngugae sorted 
+in lexicographically
+increasing order by the new langugage's rules. 
+If there is no solution, return "". If there are 
 multiple solutions, return any of them. 
 
-A string s is smaller than a string t if at the first letter where they differ, the letter in s
-comes before the letter in t in the alien language. If the first min(s.length, t.length) letteres are 
+A string s is smaller than a string t if at the first letter where they differ, 
+the letter in s
+comes before the letter in t in the alien language. 
+If the first min(s.length, t.length) letteres are 
 the same, then s is smaller if and only if s.length < t.length
 
 words = ["wrt", "wrf", "er", "ett", "rftt"]
@@ -35,8 +40,10 @@ post order dfs
 A->B->C
 A->C
 not store A because this is postorder, A->C, there is no further children
-now store C in the output, then back to A and go to B (this is postorder, we have to go to all decendent
-and print), and C has been already processed,it means gone to the outputlist, so B print because there is no
+now store C in the output, then back to A and go to B (this is postorder, 
+we have to go to all decendent
+and print), and C has been already processed,it means gone to the outputlist, 
+so B print because there is no
 decendent, and then A print
 CBA
 we need to reverse order. ABC
@@ -44,7 +51,8 @@ we need to reverse order. ABC
 '''
 Interview AirBnB alien dictionary 
 # You have found a list of alien words. 
-You know for a fact that words in this list are sorted, but you don’t know what the alphabet is. 
+You know for a fact that words in this list are sorted, but you don’t know 
+what the alphabet is. 
 You would like to reconstruct the original alphabet in such a way, 
 that the ordering between letters would explain the sorting of the list.
 
@@ -58,7 +66,8 @@ that the ordering between letters would explain the sorting of the list.
 
 1. Compare 2 words in order 
     - We don't get information when 2 letters are the same
-    - When we have a difference, then we know the letter from the first word is higher order in the alphabet
+    - When we have a difference, then we know the letter from the first word 
+    is higher order in the alphabet
     [d > b, c > d, c > a] --> [c > d > b > a (a anywhere after c)] 
     
 2. Check all letters present in words are part of alphabet
