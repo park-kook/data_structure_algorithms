@@ -15,7 +15,7 @@ s = "abcabccbaabc"
 Output: "abccba"
 
 s = "cababad"
-Output: "ababa"
+Output: ""
 
 '''
 
