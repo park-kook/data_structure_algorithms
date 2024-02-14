@@ -36,7 +36,7 @@ TypeError: 'tuple' object does not support item assignment
 
 Def dict():
     A={}
-     A = {x: x^2 for x in range(20)}
+     A = {x: x**2 for x in range(20)}
 print(A)
 
 
@@ -96,7 +96,9 @@ b = {x:None for x in range(10) }
  9: None}
 '''
 
-[x for x in range(100) if x%5==0 x%2==0]
+[x for x in range(100) if x%5==0 and x%2==0]
 #[0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
+
 [x if x%5==0 and x%2==0 else None for x in range(100)]
-#[x if x%5==0 and x%2==0 for x in range(100)]
+#[0,None,None,None,None,None,None,None,None,None,10........]
+
