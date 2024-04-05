@@ -33,3 +33,16 @@ N=2
 prob_matrix(1,1,5,5,2) #0.875
 prob_matrix(0,0,5,5,2) #0.375
 isSafe(-11,1,5,5)
+
+prob_matrix(1,1,3,3,2) #0.75
+0.625, 0.125, 0.625
+0.125, 0.0  , 0.125
+0.0625,0.125, 0.0625
+
+prob_matrix(1,0,3,3,1) for first move
+0.0625 for x+1
+0.0625 (0.25*0.25) for x-1
+0 for y-1
+0.25 for y+1 (prob_matrix(1,1,3,3,0) for second move)
+
+
