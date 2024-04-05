@@ -82,9 +82,9 @@ cache = LRUCache(2)
 cache.put(1, 1) #// it will store a key (1) with value 1 in the cache. 
 print(cache.cache) #OrderedDict([(1, 1)])
 cache.put(2, 2) #// it will store a key (2) with value 2 in the cache.
-print(cache.cache) # OrderedDict([(1, 1), (2, 1)])
+print(cache.cache) # OrderedDict([(1, 1), (2, 2)])
 cache.get(1) #// returns 1
-print(cache.cache) #OrderedDict([(2, 1), (1, 1)])
+print(cache.cache) #OrderedDict([(2, 2), (1, 1)])
 cache.put(3, 3) #// evicts key 2 and store a key (3) with value 3 in the cache. 
 print(cache.cache) #OrderedDict([(1, 1), (3, 3)])
 cache.get(2) #// returns -1 (not found) 
