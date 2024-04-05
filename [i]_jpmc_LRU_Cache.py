@@ -51,7 +51,19 @@ class LRUCache:
     def __init__(self, capacity):
         self.cache = OrderedDict()
         self.capacity = capacity
- 
+
+    # first, we add / update the key by conventional methods.
+    # And also move the key to the end to show that it was recently used.
+    # But here we will also check whether the length of our
+    # ordered dictionary has exceeded our capacity,
+    # If so we remove the first key (least recently used)
+#    def put(self, key: int, value: int) -> None:
+    def put(self, key, value):
+        self.cache[key] = value #added from the end
+        self.cache.move_to_end(key)
+        if len(self.cache) > self.capacity:
+            self.cache.popitem(last = False) #delete from the beginning
+
     # we return the value of the key
     # that is queried in O(1) and return -1 if we
     # don't find the key in out dict / cache.
@@ -65,17 +77,7 @@ class LRUCache:
             self.cache.move_to_end(key) #And also move the key to the end to show that it was recently used.
             return self.cache[key]
  
-    # first, we add / update the key by conventional methods.
-    # And also move the key to the end to show that it was recently used.
-    # But here we will also check whether the length of our
-    # ordered dictionary has exceeded our capacity,
-    # If so we remove the first key (least recently used)
-#    def put(self, key: int, value: int) -> None:
-    def put(self, key, value):
-        self.cache[key] = value #added from the end
-        self.cache.move_to_end(key)
-        if len(self.cache) > self.capacity:
-            self.cache.popitem(last = False) #delete from the beginning
+
 
 cache = None        
 cache = LRUCache(2)
