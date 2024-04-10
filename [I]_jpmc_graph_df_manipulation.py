@@ -56,4 +56,12 @@ def graph(nodes_df, mask):
   
 graph(nodes_df,  mask)
 
+
+def graph(nodes_df, mask):
+  dimension = len(nodes_df.iloc[0,1])
+  for i in range(len(mask)):
+    if not mask[i]:
+      nodes_df.iloc[:i+1] = list(zip([[0]*dimension]*len(nodes_df)))
+  return nodes_df
   
+graph(nodes_df,  mask)
