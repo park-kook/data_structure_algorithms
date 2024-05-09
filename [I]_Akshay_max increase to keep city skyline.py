@@ -34,3 +34,25 @@ class Solution(object):
             for j in range(len(grid)):
                 sm+=min(lst[j],lst1[i])-grid[i][j]
         return sm
+
+
+
+
+grid = [[3,0,8,4],
+ [2,4,5,7],
+ [9,2,6,3],
+ [0,3,1,0]]
+
+h_max = [max(i) for i in grid]
+#[8, 7, 9, 3]
+v_max = [max(i) for i in zip(*grid)]
+#[9, 4, 8, 7]
+v_max
+res = 0
+for i, v in enumerate(h_max):
+    for j, h in enumerate(v_max):
+        if v>h:
+            res += h - grid[i][j] 
+        else:
+            res+=v-grid[i][j]
+res
