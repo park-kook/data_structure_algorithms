@@ -24,7 +24,7 @@ def coninchange(amount,coins):
 
 coninchange(7,[1,3,4,5])
 coninchange(63,[1,5,10,25])
-amount = 7
+target = 7
 coins=[1,3,4,5]
 #Coin Change2
 #Given a target amount n and a list (array) of distinct coin values, 
