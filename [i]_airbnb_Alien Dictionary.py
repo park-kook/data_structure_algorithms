@@ -119,7 +119,7 @@ def reconstruct(Input):
     # no valid ordering. Return "" as per the problem description.
 #     if len(output) < len(in_degree):
 #         return ""
-    return "".join(output)
+    return "".join(output[::-1])
 
 
 reconstruct(Input)
