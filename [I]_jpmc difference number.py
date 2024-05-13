@@ -1,6 +1,6 @@
 ts = [1,3,4,5,6]
 first_dts = [2,1,1,1]
-a = ts[0]]
+a = ts[0]
 
 def reconstruct(first_dts, a):
   outcome = []
