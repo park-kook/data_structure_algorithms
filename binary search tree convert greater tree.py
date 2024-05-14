@@ -3,8 +3,8 @@ Convert Binary Search Tree(BST) to greater Tree
 Given the root of a BST, convert it to a greater tree such that every key of the original BST is changed
 to the original key plus the sum of all keys greater than the original key in BST. 
 
-As a reminder, a binary search tree is a ree that statifies these constraints:
-    the left subtree of a node contains only nodes with k eys less than the node's key. 
+As a reminder, a binary search tree is a tree that statifies these constraints:
+    the left subtree of a node contains only nodes with keys less than the node's key. 
     the right subtree of a node contains only nodes with key's greater than the node's key.
     Both the left and right subtress must also be binary search trees. 
     
