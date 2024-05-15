@@ -24,7 +24,7 @@ def validTree(n, edges):
         print([n1,n2])
         adj[n1].append(n2)
         adj[n2].append(n1)
-        
+#{0: [1, 2, 3], 1: [0, 4], 2: [0], 3: [0], 4: [1]}        
     visit = set()
     def dfs(i, prev):
         if i in visit:
