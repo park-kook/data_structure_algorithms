@@ -1,6 +1,6 @@
 '''
 Graph Valid Tree
-Given n ndoes labeled from 0 to n01 and a list of undirected edges (each h edge is a pair of nodes), 
+Given n ndoes labeled from 0 to n and a list of undirected edges (each h edge is a pair of nodes), 
 write a function to check whether these edges make up a valid tree. 
 
 '''
