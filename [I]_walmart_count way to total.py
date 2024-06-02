@@ -1,3 +1,13 @@
+
+'''
+calculate the number of possible ways 
+to achieve total as a sum of the weights 
+of items
+'''
+total=7
+k=2
+answer:4
+
 def count_ways_to_total(total, k):
     # Create a list for dp where dp[i] will be the number of ways to sum up to weight i
     dp = [0] * (total + 1)
