@@ -41,3 +41,18 @@ print("Corrected Query:", corrected_query)
 
 
 Corrected Query: python programming tutorial
+
+'''
+[(word[:i], word[i:]) for i in range(len(word) + 1)]
+[('', 'pythn'),
+ ('p', 'ythn'),
+ ('py', 'thn'),
+ ('pyt', 'hn'),
+ ('pyth', 'n'),
+ ('pythn', '')]
+
+word = "pythn"
+splits  = [(word[:i], word[i:]) for i in range(len(word) + 1)]
+[L + R[1:] for L, R in splits if R]
+['ythn', 'pthn', 'pyhn', 'pytn', 'pyth']
+'''
