@@ -1,3 +1,24 @@
+
+import re
+from collections import Counter
+
+# Function to tokenize words
+def words(text):
+    return re.findall(r'\w+', text.lower())
+
+# Load words from a large corpus
+def load_words():
+    with open('big.txt') as f:
+        return Counter(words(f.read()))
+
+# Load the word counts
+WORD_COUNTS = load_words()
+TOTAL_WORDS = sum(WORD_COUNTS.values())
+
+# Probability of a word
+def P(word):
+    return WORD_COUNTS[word] / TOTAL_WORDS
+
 def segment(text):
     n = len(text)
     # dp[i] will store the maximum probability of the first i characters
