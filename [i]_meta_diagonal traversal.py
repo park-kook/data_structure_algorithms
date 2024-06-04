@@ -84,7 +84,31 @@ def downwardDiagonal(A):
       
     
     
+def downwardDiagonal(A):
+  output = []
+  row = len(A)
+  column = len(A[0])
+  
+  for c in range(column):
+    r = 0
+    while c>=0:
+      output.append(A[r][c])
+      r+=1
+      c-=1
+      
+ 
     
+  for r in range(1, row):
+   
+    c=column-1
+    #while co>=1 and ro>=row-1:
+    while r<=row-1:
+      output.append(A[r][c])
+      r+=1
+      c-=1
+  
+      
+      
   
   
 
