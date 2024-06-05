@@ -12,7 +12,8 @@ Example 1:
 Suppose n = 2 and 
 logs = ["s1 error", "s1 error", "s2 error", "s1 error", "s1 error", "s2 success"]. 
 s1 was replaced one time. So, output should be 1.
-...
+'''
+
 
 def replaced_server(n, logs):
     error_num = {}
