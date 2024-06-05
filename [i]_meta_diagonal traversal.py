@@ -56,31 +56,7 @@ A = [[1,2,3,4],
 #3,3
 output = [1, 2, 5, 3, 6, 9, 4,7,10,13, 8, 11,14, 12, 15, 16]
 
-def downwardDiagonal(A):
-  output = []
-  row = len(A)
-  column = len(A[0])
-  
-  for c in range(column):
-    co = c
-    r = 0
-    while co>=0:
-      print(A[r][co], end=" ")
-      r+=1
-      co-=1
-      
-    print()
-    
-  for r in range(1, row):
-    ro = r
-    co=column-1
-    #while co>=1 and ro>=row-1:
-    while ro<=row-1:
-      print(A[ro][co], end = " ")
-      ro+=1
-      co-=1
-    print()
-      
+
       
     
     
