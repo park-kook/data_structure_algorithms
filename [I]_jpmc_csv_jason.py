@@ -1,19 +1,22 @@
 csv file
-name,author,year,price
-Book A,Author A,2020,25.50
-Book B,Author B,1998,15.75
-Book C,Author C,2021,30.00
-Book D,Author D,1999,20.00
-Book E,Author E,2005,35.00
+name,author,Published Date
+Book A,Author A,2020-05-01,
+Book B,Author B,1998-09-01,
+Book C,Author C,2021-06-01,
+Book D,Author D,1999-07-01,
+Book E,Author E,2005-12-01,
 
 import pandas as pd
 import json
 
 def excel_to_hierarchical_json(excel_file_path, json_file_path):
     # Read the Excel file
-    df = pd.read_excel(excel_file_path)
+   # df = pd.read_excel(excel_file_path)
+    df = pd.read_csv(excel_file_path)   
     
     # Filter the data where year > 2000
+    df['Published Date'] = pd.to_datetime(df['Published Date'])
+    df['year'] = df['Published Date'].dt.year
     filtered_df = df[df['year'] > 2000]
     
     # Create a dictionary to hold the hierarchical data
