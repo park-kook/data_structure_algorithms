@@ -1,3 +1,11 @@
+csv file
+name,author,year,price
+Book A,Author A,2020,25.50
+Book B,Author B,1998,15.75
+Book C,Author C,2021,30.00
+Book D,Author D,1999,20.00
+Book E,Author E,2005,35.00
+
 import pandas as pd
 import json
 
