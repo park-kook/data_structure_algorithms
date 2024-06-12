@@ -40,6 +40,10 @@ def excel_to_hierarchical_json(excel_file_path, json_file_path):
     output_data = {
         "data": data_list
     }
+
+    #output_date = {'data':[books_by_author]}
+
+
     
     # Write the data to a JSON file
     with open(json_file_path, 'w', encoding='utf-8') as jsonfile:
@@ -82,3 +86,22 @@ excel_to_hierarchical_json(excel_file_path, json_file_path)
         // Add other authors and their books here
     ]
 }
+
+
+
+
+
+    books_by_author = {}
+    books_by_author = ['result'] = []
+    
+    for _, row in filtered_df.iterrows():
+        author = row['author']
+        book_info = {
+            'name': row['name'],
+            'Author': row['author']
+            'year': row['year']
+        }
+        books_by_author['result'].append(book_info)
+
+
+
