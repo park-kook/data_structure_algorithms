@@ -154,3 +154,73 @@ valid_number ("abc")
 valid_number ("10e5.4")   #false  
 valid_number ("1.0e54") 
 valid_number ("2e10")   
+'''
+
+To solve the problem of determining whether a string is a valid number, considering only integers and decimals as valid, we can follow these steps:
+
+	1.	Check for invalid characters: The only valid characters in the string are digits (‘0’-‘9’), a single minus sign (’-’), and a single decimal point (’.’). Any other characters would make the string invalid.
+	2.	Check placement of special characters: The minus sign (’-’) can only appear at the beginning of the string, and there should be at most one decimal point (’.’).
+	3.	Ensure proper format: The string should have digits either before or after the decimal point (or both). Strings like “.”, “-.”, and “-..” are invalid.
+
+Let’s implement this in Python:
+
+Python Code:
+'''
+def is_valid_number(s):
+    if len(s) == 0:
+        return False
+    
+    # Check for initial minus sign
+    if s[0] == '-':
+        s = s[1:]
+    
+    # Variables to keep track of occurrences of '.' and digits
+    has_dot = False
+    has_digit = False
+    
+    for char in s:
+        if char.isdigit():
+            has_digit = True
+        elif char == '.':
+            if has_dot:
+                return False
+            has_dot = True
+        else:
+            return False
+    
+    # A valid number should have at least one digit
+    return has_digit
+
+# Example usage and tests:
+test_cases = ["13", "3.0", "-7.4", "-13.5", "abc", "123a", "-.", "-..---.", "1.0.0.1"]
+results = [is_valid_number(tc) for tc in test_cases]
+expected_results = [True, True, True, True, False, False, False, False, False]
+
+print("Results:", results)
+print("Expected:", expected_results)
+
+'''
+Explanation:
+
+	1.	Minus sign handling: If the string starts with a minus sign, it’s removed for further checks, as the minus sign is valid only at the start.
+	2.	Dot and digit tracking: We maintain two flags (has_dot and has_digit) to track the occurrence of a decimal point and at least one digit, respectively.
+	3.	Loop through the string: We loop through each character in the string:
+	•	If it’s a digit, we mark has_digit as True.
+	•	If it’s a decimal point:
+	•	If we have already encountered a decimal point, the string is invalid, so return False.
+	•	Otherwise, mark has_dot as True.
+	•	If it’s any other character, return False because it’s invalid.
+	4.	Final Check: After the loop, if there is at least one digit, the string is valid.
+
+Time Complexity:
+
+	•	O(n): The function checks each character in the string once, where n is the length of the string.
+
+Space Complexity:
+
+	•	O(1): The function uses a constant amount of extra space, regardless of the input size.
+
+This approach ensures that the function handles very long strings efficiently without relying on built-in functions that could overflow or lose precision.
+
+'''
+
