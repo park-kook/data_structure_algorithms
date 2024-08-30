@@ -123,6 +123,7 @@ for cwd, path in examples:
     result = cd(cwd, path)
     print(f'cwd: {cwd}, cd({path}) -> {result}')
 
+'''
 Explanation:
 
 	1.	Path Handling:
@@ -147,5 +148,6 @@ cwd: /x/y, cd(../p/../q) -> /x/q
 cwd: /x/y, cd(/p/./q) -> /p/q
 
 This code replicates the expected behavior without relying on the os module, effectively handling both relative and absolute paths by manipulating the path components manually.
-  
+'''
+
 
