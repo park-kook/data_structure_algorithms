@@ -13,8 +13,8 @@ def evaluate_expression(expression):
 
     for char in expression + '+':  # Add a '+' to handle the last number in the expression
         if char.isdigit():
-            #current_num = current_num * 10 + int(char)
-            current_num =  int(char)
+            current_num = current_num * 10 + int(char)
+            #current_num =  int(char)
             print(current_num)
         else:
             if last_operator == '+':
