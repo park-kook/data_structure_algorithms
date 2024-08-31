@@ -12,7 +12,7 @@ def move_nonzero_left(arr):
     
     # Traverse the array
     for i in range(len(arr)):
-        if arr[i] == 0:
+        if arr[i] != 0:
             # Swap the current nonzero element with the element at last_nonzero_index
             arr[i], arr[last_nonzero_index] = arr[last_nonzero_index], arr[i]
             last_nonzero_index += 1
