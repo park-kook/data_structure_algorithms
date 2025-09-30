@@ -67,9 +67,16 @@ print("Number of objects in the grid:", countObjects(grid, isSameObject))
 
 
 
-
-
-
+'''
+given an array of visits(user_id, location_id, start_time, end_time) 
+and an array of users infected with covid19 users write a function 
+that returns the total number fusers that caught covid-19. 
+when a user gets infected they will start infecting other users 
+afterwards immediately meaning the person becomes contagious 
+right after being infected and there is no incubation period. 
+infected = [1], infection_simulator(visits, infected). 
+visits =[[0,0,1,3],[0,1,4,5],[0,2,8,9],1,1,4,6],[2,2,7,9],[3,2,6,8]]
+'''
 
 visits = [
     [0, 0, 1, 3],
