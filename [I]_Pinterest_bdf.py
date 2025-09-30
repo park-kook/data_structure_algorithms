@@ -1,3 +1,19 @@
+'''
+This is a classic connected components problem in a 2D grid, 
+but instead of knowing adjacency rules, we are given an abstract API isSameObject(p1, p2) 
+to tell whether two pixels belong to the same object.
+We are given a 2D grid (pin) of pixels. 
+Each pixel may or may not belong to an identifiable object
+(like a purse or shoes). 
+We don’t know in advance what pixels are connected, but we are given access to:
+def isSameObject(p1, p2) -> bool
+
+	•	You can only use isSameObject(p1, p2) to identify connectivity.
+	•	You must assume nothing about the pixel labels or shape of the objects.
+	•	You must explore all pixels in the grid to ensure full coverage.
+'''
+
+
 from collections import deque
 
 # Sample grid
